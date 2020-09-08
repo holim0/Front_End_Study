@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body { font-size: 3rem;}
+        #main-title {
+            background : #fff000;
+        }
+        .menu {
+            display: flex;
+        }
+        .menu-link {
+            margin : .1em;
+            padding : .3em;
+            color: #fff;
+            text-decoration: none;
+            background : dodgerblue;
+            list-style: none;
+        }
+
+        .menu-active {
+            background: orange;
+        }
+    </style>
+</head>
+<body>
+    <h1 id= "main-title">
+        <span>Event</span>
+    </h1>
+
+    
+    <nav class="menu">
+        <a href="#" class="menu-link" data-menu="1">menu1</a>
+        <a href="#" class="menu-link" data-menu="2">menu2</a>
+        <a href="#" class="menu-link" data-menu="3">menu3</a>
+    </nav>
+
+    <script src= "script.js"></script>
+</body>
+</html>
