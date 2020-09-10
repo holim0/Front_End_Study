@@ -2,9 +2,24 @@
 
     const actions = {
 
-        birdFlies() {
-            let tmp=window.innerWidth;  
-            document.querySelector('[data-index="2"] .bird').style.transform = 'translateX(${tmp}px)';
+        birdFlies(key) {
+            
+            if(key){
+                document.querySelector('[data-index="2"] .bird').style.transform = `translateX(${window.innerWidth}px)`;
+                console.log(key);
+            }else{
+                console.log(key);
+                document.querySelector('[data-index="2"] .bird').style.transform =`translateX(-100%)`;
+            }
+        },
+
+        birdFlies2(key) {
+            
+            if(key){
+                document.querySelector('[data-index="5"] .bird').style.transform = `translate(${window.innerWidth}px, ${-window.innerHeight *0.7}px)`;
+            }else{
+                document.querySelector('[data-index="5"] .bird').style.transform = `translateX(-100%)`;
+            }
         }
 
         
@@ -56,6 +71,7 @@
             
             if(boundingRect.top > window.innerHeight *0.1 
                 && boundingRect.top< window.innerHeight * 0.8){
+                    
                     inacti();
                     cur = graphicElems[step.dataset.index];
                     activate(cur.dataset.action);
