@@ -12,3 +12,9 @@ function clickHandler(e){
 }
 
 menu.addEventListener('click', clickHandler);
+
+
+
+let a =17;
+
+console.log(`value: ${a}, type: ${typeof a}`);
