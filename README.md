@@ -1,5 +1,7 @@
 # 🍓Front-End Study🍓
 
+## DATE : 2020-09-10 기록
+
 
 
 ### Var, let의 차이
