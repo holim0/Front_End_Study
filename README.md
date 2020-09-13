@@ -232,6 +232,7 @@ userStorage
     .catch(console.log);
 ```
 
+<br/>
 
 
 
@@ -314,3 +315,8 @@ getData()
 {);
 
 ```
+
+
+<img width="972" alt="스크린샷 2020-09-14 오전 12 58 13" src="https://user-images.githubusercontent.com/48006103/93022656-63fd7800-f625-11ea-9054-db9db9e3b705.png">
+
+
