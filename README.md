@@ -232,6 +232,9 @@ userStorage
     .catch(console.log);
 ```
 
+
+
+
 ## DATE : 2020-09-14 기록
 
 ### <Promise 추가 공부>
