@@ -63,7 +63,8 @@ ex) `font-family: Georgia, "Times New Roman", serif;` :  제일 먼저 Georgia �
 
 → margin 은 박스 외부, padding 은 박스 내부에 대한 것을 조절
 
-![%E2%9C%A8CSS_Study%E2%9C%A8%2011f3e4ae8b894b68b4a549a2fc57960b/KakaoTalk_Photo_2020-09-21-00-22-03.png](%E2%9C%A8CSS_Study%E2%9C%A8%2011f3e4ae8b894b68b4a549a2fc57960b/KakaoTalk_Photo_2020-09-21-00-22-03.png)
+![KakaoTalk_Photo_2020-09-21-00-22-03](https://user-images.githubusercontent.com/48006103/93715824-a7686100-fba6-11ea-9b14-ee5302ec3abc.png)
+<br/>
 
 ### <Position 속성>
 
