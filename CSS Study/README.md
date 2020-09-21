@@ -143,7 +143,7 @@ ex) `font-family: Georgia, "Times New Roman", serif;` :  제일 먼저 Georgia �
 
   → **wrap일 때** : 한 줄에 공간이 없으면 다음 줄로 넘겨준다.
 
-  <img width="861" alt="스크린샷 2020-09-21 오후 9 51 24" src="https://user-images.githubusercontent.com/48006103/93772837-469a6080-fc5a-11ea-8292-91fd3132f53a.png">
+  <img width="861" height="500" alt="스크린샷 2020-09-21 오후 9 51 24" src="https://user-images.githubusercontent.com/48006103/93772837-469a6080-fc5a-11ea-8292-91fd3132f53a.png">
 
   </br>
 
