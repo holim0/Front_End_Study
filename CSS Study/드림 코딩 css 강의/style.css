@@ -1,0 +1,32 @@
+
+.container{
+    background: beige;
+    height: 100vh;
+    display: flex;
+    
+}
+
+
+
+.item{
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+
+}
+
+.item1{
+    background-color: red;
+    align-self: center;
+}
+
+.item2{
+    background-color:orange;
+    
+    
+}
+.item3{
+    background-color:yellow;
+    
+    
+}

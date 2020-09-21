@@ -72,3 +72,95 @@ ex) `font-family: Georgia, "Times New Roman", serif;` :  제일 먼저 Georgia �
 2. relative : static 의 원래 위치로부터 위치를 계산 및 이동시킨다. 
 3. absolute :  `position: static` 속성을 가지고 있지 않은 부모를 기준으로 움직인다. 만약 부모 중에 포지션이 relative, absolute, fixed인 태그가 없다면 가장 위의 태그(body)가 기준이 된다. 
 4. fixed : 스크롤에 영향을 받지 않는 고정된 위치 설정 방식이다.
+
+- ------
+
+  ## [2020/09/21]
+
+  - `<ol></ol`> : order list
+  - `<li></li>` :
+  - div: 블록 레벨의 엘리트
+  - 대상 : hover : 마우스가 올라갔을 때의 모습을 설정해줄 수 있다.
+
+  </br>
+
+  **< 속성 세분화 스타일 적용>**
+
+  ```css
+  a[href]{
+  			// a 태그 중 href를 가진 것만 스타일을 적용한다.
+  }
+  
+  a[hrer="naver.com"] {
+       // a 태그 중 href=="naver.com" 인 것만 스타일을 적용한다.
+  }
+  
+  a[href^="naver"] {
+  			// a 태그 중 href의 시작이 "naver" 인 것만 스타일을 적용한다.
+  }
+  
+  a[href$=".com"] {
+       // a 태그 중 href의 끝이 ".com" 인 것만 스타일을 적용한다.
+  }
+  ```
+
+  - `border : 2px dashed red;` → 한 줄에 쓸 수 있다.
+  - div : block
+  - span : inline  → 내용물이 있어야 표기된다.
+
+  → display를 통해서 inline, block을 설정할 수 있다.
+
+  </br>
+
+  **<Inline vs Block>**
+
+  1. Inline  : 콘텐츠에 따라서 달라진다.  → 콘텐츠의 크기에 맞춰서 변경된다.
+  2. Block : 콘텐츠에 상관없이 블록 단위로 설정된다. (한 줄당 하나씩 들어간다.)
+
+  </br>
+
+  </br>
+
+  **<FlexBox> - css 의 꽃**
+
+  </br>
+
+  → 크게 2가지만 이해하면 된다!
+
+  1. container 에 적용 되는 속성 값과 item 속성 값을 설정할 수 있다.
+
+  → container 에 적용되는 속성 값:
+
+  - display
+  - flex-direction : 중심축을 정해준다. (row, column, row-reverse, column-reverse)
+  - flex-wrap
+
+  → **nowrap(기본값)일 때** : 요소가 많아도 한 줄에 나타내준다.
+
+  <img width="972" alt="스크린샷 2020-09-21 오후 9 51 09" src="https://user-images.githubusercontent.com/48006103/93772760-2ff40980-fc5a-11ea-98e1-22995b6aa9ab.png">
+
+  </br>
+
+  → **wrap일 때** : 한 줄에 공간이 없으면 다음 줄로 넘겨준다.
+
+  <img width="861" alt="스크린샷 2020-09-21 오후 9 51 24" src="https://user-images.githubusercontent.com/48006103/93772837-469a6080-fc5a-11ea-8292-91fd3132f53a.png">
+
+  </br>
+
+  
+
+  - flex-flow : flow-direction, flow-wrap 을 합쳐서 쓸 수 있는 것.
+  - justify-content : main 축을 기준으로 content 가 어디서부터 시작될지 설정해 줄 수 있다. ( 종류 적기 )
+  - align-item
+  - align-content : 서브 축을 기준으로 content 정렬.
+
+  </br>
+
+  → item 에 적용되는 속성 값:
+
+  - order : item의 순서를 설정 해줄 수 있다. (거의 안 쓰임, 알아만 두자)
+  - flex-grow : item 이 화면을 자동으로 채우도록 한다. (화면이 커질 때 어떻게 채울지)
+  - flex-shrink : 화면이 줄어들 때 item이 어떻게 줄어들지 설정.
+  - flex-basis : item이 공간을 얼마나 차지할지에 대한 것을 세부적으로 설정. (기본값은 auto)
+  - flex : flex-grow , flex-shrink, flex-basis 의 형식으로 합쳐서 쓸 수 있다.
+  - align-self : item 별로 item을 정렬할 수 있다.
