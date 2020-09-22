@@ -329,6 +329,8 @@ getData()
 
 ## [DATE: 2020/09/22 - JS 기초]
 
+</br>
+
 - **Objects and Properties → object can hold different types of data. → 코드 주석 참고**
 
 ```jsx
@@ -362,6 +364,8 @@ let jane = new Object();  // 새로운 객체 형성.
 jane.name = 'jane';
 ```
 
+</br>
+
 - **Objects and methods → 코드 주석 참고**
 
 ```jsx
@@ -380,6 +384,8 @@ john.calcAge();     //propertiy 추가
  
 console.log(john);
 ```
+
+</br>
 
 - **Hoisting → 코드 주석 참고**
 
@@ -413,7 +419,9 @@ foo();
 console.log(age);  // global print
 ```
 
-- this → object 가 method 를 call 할 때만 할당이 된다.
+</br>
+
+- **this → object 가 method 를 call 할 때만 할당이 된다.**
 
 ```jsx
 calAge(1996);
