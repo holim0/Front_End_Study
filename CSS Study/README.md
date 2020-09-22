@@ -30,6 +30,8 @@ margin-right: auto;    →  마진을 왼쪽, 오른쪽을 auto로 주면 가운
 
 ---
 
+</br>
+
 ## [2020/09/18]
 
 - `font - family` :  font | initial | inherit
@@ -121,6 +123,8 @@ a[href$=".com"] {
 
 1. Inline  : 콘텐츠에 따라서 달라진다.  → 콘텐츠의 크기에 맞춰서 변경된다. 
 2. Block : 콘텐츠에 상관없이 블록 단위로 설정된다. (한 줄당 하나씩 들어간다.)
+
+</br>
 
 **<FlexBox> - css 의 꽃**
 
