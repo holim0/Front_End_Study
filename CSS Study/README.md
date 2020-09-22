@@ -134,6 +134,8 @@ a[href$=".com"] {
 - flex-direction : 중심축을 정해준다. (row, column, row-reverse, column-reverse)
 - flex-wrap
 
+</br>
+
 → **nowrap(기본값)일 때** : 요소가 많아도 한 줄에 나타내준다. 
 
 <img width="972" alt="_2020-09-21__9 51 09" src="https://user-images.githubusercontent.com/48006103/93894592-db1fc400-fd29-11ea-8275-2f932d9e7c51.png">
