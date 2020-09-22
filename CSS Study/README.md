@@ -119,6 +119,8 @@ a[href$=".com"] {
 
 → display를 통해서 inline, block을 설정할 수 있다. 
 
+</br>
+
 
 **< Inline vs Block >**
 
