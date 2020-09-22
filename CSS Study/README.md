@@ -120,7 +120,7 @@ a[href$=".com"] {
 → display를 통해서 inline, block을 설정할 수 있다. 
 
 
-**<Inline vs Block>**
+** <Inline vs Block> **
 
 1. Inline  : 콘텐츠에 따라서 달라진다.  → 콘텐츠의 크기에 맞춰서 변경된다. 
 2. Block : 콘텐츠에 상관없이 블록 단위로 설정된다. (한 줄당 하나씩 들어간다.)
@@ -128,7 +128,7 @@ a[href$=".com"] {
 </br>
 
 
-**<FlexBox> - css 의 꽃**
+** <FlexBox> - css 의 꽃 **
 
 → 크게 2가지만 이해하면 된다!
 
