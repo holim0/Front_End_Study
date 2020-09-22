@@ -164,3 +164,53 @@ ex) `font-family: Georgia, "Times New Roman", serif;` :  제일 먼저 Georgia �
   - flex-basis : item이 공간을 얼마나 차지할지에 대한 것을 세부적으로 설정. (기본값은 auto)
   - flex : flex-grow , flex-shrink, flex-basis 의 형식으로 합쳐서 쓸 수 있다.
   - align-self : item 별로 item을 정렬할 수 있다.
+
+</br>
+
+------
+
+## [2020/09/22]
+
+- 반응형 헤더 만들기 실습.
+
+→ media 쿼리 예시
+
+```css
+@media screen and (max-width : 768px){  // 너비가 일정 수준일 때 바꿔 줄 수 있다. 
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+
+    .navbar_menu{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar_menu li {
+        width: 100%; 
+        text-align: center;
+    }
+
+    .navbar_icons {
+        display: none;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navbar_toggle{
+        display: block;
+    }
+
+    .navbar_menu.active, 
+    .navbar_icons.active{
+        display: flex;
+    }
+}
+```
+
+- max-width: 특정 너비 이하일 때 변경
+- min-width:  특정 너비 이상일 때 변경
