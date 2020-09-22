@@ -157,8 +157,8 @@ a[href$=".com"] {
 </br>
 
 - flex-flow : flow-direction, flow-wrap 을 합쳐서 쓸 수 있는 것.
-- justify-content : main 축을 기준으로 content 가 어디서부터 시작될지 설정해 줄 수 있다. ( 종류 적기 )
-- align-item
+- justify-content : main 축(현재 축)을 기준으로 content 가 어디서부터 시작될지 설정해 줄 수 있다. ( space-between, center, flex-start, flex-end etc.. )
+- align-item : 현재 축의 반대를 정렬 (기본 값 :stretch).
 - align-content : 서브 축을 기준으로 content 정렬.
 
 </br>
@@ -170,7 +170,7 @@ a[href$=".com"] {
 - flex-shrink : 화면이 줄어들 때 item이 어떻게 줄어들지 설정.
 - flex-basis : item이 공간을 얼마나 차지할지에 대한 것을 세부적으로 설정. (기본값은 auto)
 - flex : flex-grow , flex-shrink, flex-basis 의 형식으로 합쳐서 쓸 수 있다.
-- align-self : item 별로 item을 정렬할 수 있다.
+- align-self : item 별로 item을 정렬할 수 있다. (center, flex-start, flex-end etc.)
 
 ---
 
@@ -221,3 +221,42 @@ a[href$=".com"] {
 
 - max-width: 특정 너비 이하일 때 변경
 - min-width:  특정 너비 이상일 때 변경
+
+------
+
+</br>
+
+</br>
+
+## [2020/09/23]
+
+</br>
+
+**< FlexBox >**
+
+- `justify-content : space-between`  → 사이에 공간을 균일하게 준다.
+- `justify-content : space-around`  → 양 끝에도 공간을 주면서 균일하게 공간 할당.
+- flex-grow → 여백을 어떻게 나눠 가질 것 인지에 대한 것.
+
+
+
+</br>
+
+</br>
+
+**< Grid >  - 내용 따로 공부하고 정리하기.**
+
+```css
+grid-template-columns: 4fr 6fr;  // 4대 6으로 공간을 나눠 가진다. 
+
+grid-gap : 1rem; // grid 사이에 1rem 만큼 틈을 준다. 
+
+grid-template-columns: repeat(3, 1fr); // 1fr을 3번 반복한다. 
+
+grid-template-columns: 200px 1fr; // 앞의 column 은 200px로 고정하고 두 번째만 1fr로 공간을 차지하게 한다. 
+
+grid-auto-rows: minmax(200px, auto);  //최소 200px 이고 다음부터는 자동.
+
+grid-column: 3;  // column 3에 놓겠다.
+grid-row : 3/5;  // row에서 3부터 5까지 놓겠다. 
+```
