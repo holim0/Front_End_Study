@@ -6,7 +6,7 @@
 
 ### Var, let의 차이
 
-### ⭐var과 function의 hoisting → 어디에 선언 했는지 상관 없이 선언을 위로 끌어 올려주는 것을 말한다.
+### ⭐var과 function의 hoisting → 어디에 선언 했는지 상관 없이 선언을 위로 끌어 올려주는 것을 말한다. (선언 전에 호출 되어도 hoisting 돼 코드가 문제 없이 실행된다.) 
 
 ### 그래서 let 을 사용해야 한다.
 
@@ -320,3 +320,133 @@ getData()
 <img width="972" alt="스크린샷 2020-09-14 오전 12 58 13" src="https://user-images.githubusercontent.com/48006103/93022656-63fd7800-f625-11ea-9054-db9db9e3b705.png">
 
 
+
+
+
+------
+
+</br>
+
+## [DATE: 2020/09/22 - JS 기초]
+
+- **Objects and Properties → object can hold different types of data. → 코드 주석 참고**
+
+```jsx
+//obeject literal
+let john = {
+    firstName : 'John',  // key와 value
+    lastName : 'Smith',
+    brithYear : 1990, 
+    job : 'teacher',
+    isMarried : false
+
+};
+
+console.log(john.firstName);    // . 으로 value 에 접근할 수 있다. 
+
+console.log(john['isMarried']) // 배열 속 key 값으로도 value 에 접근할 수 있다. 
+
+let x = 'brithYear';
+
+console.log(john[x]);
+
+//mutate obeject
+
+john.job = "programmer";
+
+console.log(john.job);
+
+//new Obeject syntax
+let jane = new Object();  // 새로운 객체 형성. 
+
+jane.name = 'jane';
+```
+
+- **Objects and methods → 코드 주석 참고**
+
+```jsx
+let john = {
+    firstName : 'John',  // key와 value
+    lastName : 'Smith',
+    brithYear : 1990, 
+    job : 'teacher',
+    isMarried : false,
+    calcAge : function(){    //method
+        this.age = 2020-this.brithYear;  // this 는 현재 object 를 가리킨다. this.age property 추가 
+    }
+};
+
+john.calcAge();     //propertiy 추가 
+ 
+console.log(john);
+```
+
+- **Hoisting → 코드 주석 참고**
+
+```jsx
+calculateAge(1999);   // 함수 선언 전에 함수를 호출 -> hoisting 이 되어 잘 작동한다. 
+
+function calculateAge(year){  // 함수 선언. 
+    console.log(2020 - year);
+}
+
+//retirement(1990);   // 작동하지 않는다
+
+var retirement = function(year) {     // 함수의 선언 방식이 아니기 떄문에 hoisting 되지 않는다. (only work on function declaration)
+    console.log(65- (2020- year));
+}
+
+//variables
+
+console.log(age); // 작동은 되지만 undefined로 뜬다. (hoisting) -> js 가 변수가 선언되었는지는 알고 있는 것이다. 
+
+var age = 50;  //global 
+
+console.log(age);
+
+function foo(){
+    var age = 65; //local
+    console.log(age);   //local print
+}
+
+foo();  
+console.log(age);  // global print
+```
+
+- this → object 가 method 를 call 할 때만 할당이 된다.
+
+```jsx
+calAge(1996);
+
+function calAge(year){
+    console.log(2020-year);
+    console.log(this);  // this: global object -> window object 를 가리킴.
+}
+
+let john = {
+    name: 'john',
+    year: 1990,
+    cal : function () {
+        console.log(this);   // this 는 john object 를 가리킨다. 
+
+        function inner() {
+            console.log(this);      // window 를 가리킨다. default object = window. -> method가 아니기 때문이다. 
+        }
+
+        inner();
+    }
+};
+
+john.cal();
+
+let mike ={
+    name: 'mike',
+    year: '1996',
+};
+
+mike.cal = john.cal;  //method borrowing 
+
+mike.cal();
+```
+
+</br>
