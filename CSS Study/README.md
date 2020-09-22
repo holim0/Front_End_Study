@@ -1,440 +1,213 @@
-# Front-End Study
+# ✨CSS_Study✨
 
-## [DATE :2020-09-10]
+- div : block
+- span : inline(크기 조절이 불가능)
+- Inline-block ( 두 가지 속성을 다 가지고 있다)
+- box-sizing : border-box(border, padding이 width 에 포함된다)  → 많이 쓰인다.
+- rem ⇒ root em (단위) 약 16px 이다.
+- vertical-align : 수직으로 정렬해주는 것.
+- max-width : 최대 폭을 지정해준다.
 
-### Var, let의 차이
+margin-left: auto;
 
-### ⭐var과 function의 hoisting → 어디에 선언 했는지 상관 없이 선언을 위로 끌어 올려주는 것을 말한다. (선언 전에 호출 되어도 hoisting 돼 코드가 문제 없이 실행된다.)
+margin-right: auto;    →  마진을 왼쪽, 오른쪽을 auto로 주면 가운데 정렬이 된다.
 
-### 그래서 let 을 사용해야 한다.
+→ 축약해서 margin : 0 auto; 로 사용가능함.
 
-### Client ↔ Server
-
-## <JSON>
-
-1. Object to JSON
-- 함수는 변환되지 않는다.
-
-```jsx
-//1. obeject to json
-
-const rabbit ={
-
-    name: 'tori',
-    color: 'white',
-    size : null,
-    birth : new Date(),
-
-};
-
-json = JSON.stringify(rabbit, (key, value) =>
-{
-    console.log(`key : ${key}, value : ${value}`);
-    return value;
-});
-
-console.log(json);
-```
-
- 2. JSON to Object
-
-함수를 사용하면 세부적으로 조정 할 수 있다. 
+- 자식들이 float가 적용이 되면 부모가 자식을 인식을 하지 못한다.
 
 ```jsx
-//2. json to object
-
-console.clear();
-
-json = JSON.stringify(rabbit);
-
-const obj = JSON.parse(json, (key, value) =>{
-    return key=== 'birth' ? new Date(value) : value;
-});
-
-console.log(obj.birth);
-```
-
-## <동기와 비동기>
-
-1. Synchronous callback
-- 순차적으로 콜백 해준다.
-
-2. Asyhchronous callback
-
-- 언제 실행될 지 예측할 수 없는 콜백.
-- 순서대로 콜백이 되지 않는다.
-
-🔥CallBack 지옥
-
-```jsx
-class UserStorage{
-
-    loginUser(id, password, onSucess, onError){
-        setTimeout(()=>{
-
-            if((id==='holim0' && password==='jj1226') || (id==='holim4' && password==='1234')){
-                onSucess(id);
-            }else{
-                onError(new Error('not found'));
-            }
-
-        }, 2000);
-
-    }
-    
-    getRoles(user, onSucess, onError){
-        if(user==='holim0'){
-            onSucess({name: 'holim0', role: 'admin'});
-        }else{
-            onError(new Error('no access'));
-        }
-    }
+.container:after{
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
 }
 
-const userStorage =new UserStorage();
-const id=prompt('enter your id');
-const password = prompt('enter your password');
-
-userStorage.loginUser(
-    id, 
-    password, 
-    user=>{
-        userStorage.getRoles(
-            user, 
-            userWithRole=>{
-                alert(`hello ${userWithRole.name}, you have ${userWithRole.role}`);
-            }, 
-            error=>{
-                console.log(error);
-            })
-    }, 
-    (error) => {console.log(error)}
-    
-);
-```
-
-→ 가독성이 떨어진다. 에러 발생 시 문제점을 찾기가 힘들다. 
-
-## <Promise>
-
-- JS 에 내장된 객체이고 비동기 수행을 위해 callback 대신 쓰인다.
-- 시간이 오래걸리는 것을 처리하는데 유용하다 ex) network, readfiles
-- 새로운 promise 가 생성될때는 executor 가 자동으로 실행된다. (유의해야한다) → why? 불필요한 작업을 수행 할 수 있기 때문임.
-- 
-
-1. state : pending ( 수행 중) - > fullfilled or rejected
-2. Producer vs consumer
-
-### 1. Producer
-
-```jsx
-//1. Producer
-
-const promise = new Promise((resolve, reject)=>{
-    //doing some heavy work (networ)
-
-    console.log('dong');
-    setTimeout(()=>{
-        resolve('holim0');
-    }, 2000);
-
-});
-```
-
-### 2. Consumers : then, catch, finally
-
-- then : resolve 일 때 실행
-- catch : rejected 일 때 실행
-- finally : resolve , rejected 상관없이 마지막에 실행
-
-```jsx
-//2. Consumer : then, catch, finally
-
-promise
-    .then((value)=>{
-    console.log(value);
-    })
-    .catch(error=>{
-        console.log(error);
-    })
-    .finally(()=>{
-        console.log('finally');
-    });
-```
-
-### 3. Promise chaining
-
-```jsx
-const fetchNumber = new Promise((resolve, reject)=>{
-    setTimeout(()=> resolve(1), 1000);
-
-});
-
-fetchNumber
-    .then(num=> num*2)
-    .then(num => num*3)
-    .then(num=>{
-        return new Promise((resolve, reject)=>{
-            setTimeout(()=> resolve(num-1), 1000);
-        });
-    })
-    .then(num=> console.log(num));
-```
-
-## Callback to Promise
-
-```jsx
-class UserStorage{
-
-    loginUser(id, password){
-
-        return new Promise((resolve, reject)=>{
-            setTimeout(()=>{
-
-                if((id==='holim0' && password==='jj1226') || (id==='holim4' && password==='1234')){
-                    resolve(id)
-                }else{
-                    reject(new Error('not found'));
-                }
-    
-            }, 2000);
-        });
-    }
-    
-    getRoles(user){
-
-        return new Promise((resolve, reject)=>{
-            setTimeout(()=>{
-
-                if(user==='holim0'){
-                    resolve({name: 'holim0', role: 'admin'});
-                }else{
-                    reject(new Error('no access'));
-                }
-    
-            }, 1000);
-            
-        });
-        
-    }
-}
-
-const userStorage =new UserStorage();
-const id=prompt('enter your id');
-const password = prompt('enter your password');
-
-userStorage
-    .loginUser(id, password)
-    .then(userStorage.getRoles)
-    .then(user => alert(`hello ${user.name},  you have a ${user.role}`))
-    .catch(console.log);
-```
-
-## [DATE : 2020-09-14]
-
-### <Promise 추가 공부>
-
-- 프로미스는 자바스크립트 비동기 처리에 사용되는 객체
-- 여기서 자바스크립트의 비동기 처리란 ‘특정 코드의 실행이 완료될 때까지 기다리지 않고 다음 코드를 먼저 수행하는 자바스크립트의 특성’을 의미
-
-### Pending(대기)
-
-먼저 아래와 같이 `new Promise()` 메서드를 호출하면 대기(Pending) 상태
-
-```jsx
-new Promise();
-```
-
-`new Promise()` 메서드를 호출할 때 콜백 함수를 선언할 수 있고, 콜백 함수의 인자는 `resolve`, `reject`.
-
-```jsx
-new Promise(function(resolve, reject) {
-  // ...});
-
-```
-
-### Fulfilled(이행)
-
-여기서 콜백 함수의 인자 `resolve`를 아래와 같이 실행하면 이행(Fulfilled) 상태가 됩니다.
-
-```jsx
-new Promise(function(resolve, reject) {
-  resolve();
-});
-
-```
-
-그리고 이행 상태가 되면 아래와 같이 `then()`을 이용하여 처리 결과 값을 받을 수 있습니다.
-
-```jsx
-function getData() {
-  return new Promise(function(resolve, reject) {
-    var data = 100;
-    resolve(data);  // data의 값을 resolve로 전달 (콜백함수이다)
-  });
-}
-
-// resolve()의 결과 값 data를 resolvedData로 받음  
-getData()
-	.then((resolvedData)=> {
-		  console.log(resolvedData); // 100
-});
-
-```
-
-### Rejected(실패)
-
-여기서 `reject`를 아래와 같이 호출하면 실패(Rejected) 상태가 된다.
-
-```jsx
-new Promise(function(resolve, reject) {
-  reject();
-});
-```
-
-그리고, 실패 상태가 되면 실패한 이유(실패 처리의 결과 값)를 `catch()`로 받을 수 있음.
-
-```jsx
-function getData() {
-  return new Promise(function(resolve, reject) {
-    reject(new Error("Request is failed"));  // 콜백 함수이다.
-  });
-}
-
-// reject()의 결과 값 Error를 err에 받음
-getData()
-		.then()
-		.catch((err) => {
-  console.log(err);
-{);
-
+//가상의 엘리먼트를 추가해준다.
 ```
 
 ---
+
+## [2020/09/18]
+
+- `font - family` :  font | initial | inherit
+
+ex) `font-family: Georgia, "Times New Roman", serif;` :  제일 먼저 Georgia 글꼴을 찾는다. 해당 글꼴이 있다면 사용하고, 없다면 Times New Roman 글꼴을 사용. 그 글꼴도 없다면 웹 브라우저에서 설정한 명조 계열의 글꼴을 사용.
+
+`text-align` :  
+
+- left : 왼쪽 정렬입니다.
+- right : 오른쪽 정렬입니다.
+- center : 가운데 정렬입니다.
+- justify : 양쪽 정렬입니다.
+- initial : 기본값으로 설정합니다.
+- inherit : 부모 요소의 속성값을 상속받습니다.
+
+---
+
+- rgba 를 통해서 색상을 조절할 수 있다.
+
+- box-sizing : 박스의 크기를 화면에 표시하는 방식을 변경하는 속성
+
+→ 일반적으로 content-box(기본값)이다.
+
+→ content-box 로 설정하게 되면  너비와 높이는 content 영역 만을 의미한다. (border , padding, margin 제외)
+
+→ 하지만 border-box로 하게되면 너비와 높이에 content, border, padding이 포함된다. (margin 제외)
+
+- margin : top right bottom left → 이런 식으로 한꺼번에 쓸 수도 있다.(시계 방향으로 생각하면 된다.) / 패딩도 똑같은 포맷으로 사용할 수 있다.
+
+### <Margin and Padding>
+
+→ margin 은 박스 외부, padding 은 박스 내부에 대한 것을 조절
+
+![KakaoTalk_Photo_2020-09-21-00-22-03](https://user-images.githubusercontent.com/48006103/93894408-a90e6200-fd29-11ea-9a07-b5b587b20c06.png)
+
 </br>
 
-## [DATE: 2020/09/22 - JS 기초]
+</br>
 
-- **Objects and Properties → object can hold different types of data. → 코드 주석 참고**
+### <Position 속성>
 
-```jsx
-//obeject literal
-let john = {
-    firstName : 'John',  // key와 value
-    lastName : 'Smith',
-    brithYear : 1990, 
-    job : 'teacher',
-    isMarried : false
+1. static : 모든 요소에 주어지는 기본값이다. (실질적으로 많이 사용되지 않는다, 그냥 기본 위치이다.)
+2. relative : static 의 원래 위치로부터 위치를 계산 및 이동시킨다. 
+3. absolute :  `position: static` 속성을 가지고 있지 않은 부모를 기준으로 움직인다. 만약 부모 중에 포지션이 relative, absolute, fixed인 태그가 없다면 가장 위의 태그(body)가 기준이 된다. 
+4. fixed : 스크롤에 영향을 받지 않는 고정된 위치 설정 방식이다. - absolute 위치에 존재.
+5. sticky : 원래 있던 자리에서 스크롤에 영향을 받지 않는 설정 방식이다.  - relative 속성처럼 동작.
 
-};
+---
 
-console.log(john.firstName);    // . 으로 value 에 접근할 수 있다. 
+</br>
 
-console.log(john['isMarried']) // 배열 속 key 값으로도 value 에 접근할 수 있다. 
+## [2020/09/21]
 
-let x = 'brithYear';
+- `<ol></ol`> : order list
+- `<li></li>` :
+- div: 블록 레벨의 엘리트
+- 대상 : hover : 마우스가 올라갔을 때의 모습을 설정해줄 수 있다.
 
-console.log(john[x]);
+</br>
 
-//mutate obeject
+**< 속성 세분화 스타일 적용>**
 
-john.job = "programmer";
+```css
+a[href]{
+			// a 태그 중 href를 가진 것만 스타일을 적용한다.
+}
 
-console.log(john.job);
+a[hrer="naver.com"] {
+     // a 태그 중 href=="naver.com" 인 것만 스타일을 적용한다.
+}
 
-//new Obeject syntax
-let jane = new Object();  // 새로운 객체 형성. 
+a[href^="naver"] {
+			// a 태그 중 href의 시작이 "naver" 인 것만 스타일을 적용한다.
+}
 
-jane.name = 'jane';
+a[href$=".com"] {
+     // a 태그 중 href의 끝이 ".com" 인 것만 스타일을 적용한다.
+}
 ```
+
+- `border : 2px dashed red;` → 한 줄에 쓸 수 있다.
+
+- div : block
+- span : inline  → 내용물이 있어야 표기된다.
+
+→ display를 통해서 inline, block을 설정할 수 있다. 
+
+**<Inline vs Block>**
+
+1. Inline  : 콘텐츠에 따라서 달라진다.  → 콘텐츠의 크기에 맞춰서 변경된다. 
+2. Block : 콘텐츠에 상관없이 블록 단위로 설정된다. (한 줄당 하나씩 들어간다.)
+
+**<FlexBox> - css 의 꽃**
+
+→ 크게 2가지만 이해하면 된다!
+
+1. container 에 적용 되는 속성 값과 item 속성 값을 설정할 수 있다. 
+
+→ container 에 적용되는 속성 값:
+
+- display
+- flex-direction : 중심축을 정해준다. (row, column, row-reverse, column-reverse)
+- flex-wrap
+
+→ **nowrap(기본값)일 때** : 요소가 많아도 한 줄에 나타내준다. 
+
+<img width="972" alt="_2020-09-21__9 51 09" src="https://user-images.githubusercontent.com/48006103/93894592-db1fc400-fd29-11ea-8275-2f932d9e7c51.png">
+
 </br>
 
-- **Objects and methods → 코드 주석 참고**
+→ **wrap일 때** : 한 줄에 공간이 없으면 다음 줄로 넘겨준다. 
 
-```jsx
-let john = {
-    firstName : 'John',  // key와 value
-    lastName : 'Smith',
-    brithYear : 1990, 
-    job : 'teacher',
-    isMarried : false,
-    calcAge : function(){    //method
-        this.age = 2020-this.brithYear;  // this 는 현재 object 를 가리킨다. this.age property 추가 
+<img width="861" alt="_2020-09-21__9 51 24" src="https://user-images.githubusercontent.com/48006103/93894694-f8549280-fd29-11ea-9051-d915a798850b.png">
+
+</br>
+
+- flex-flow : flow-direction, flow-wrap 을 합쳐서 쓸 수 있는 것.
+- justify-content : main 축을 기준으로 content 가 어디서부터 시작될지 설정해 줄 수 있다. ( 종류 적기 )
+- align-item
+- align-content : 서브 축을 기준으로 content 정렬.
+
+</br>
+
+→ item 에 적용되는 속성 값:
+
+- order : item의 순서를 설정 해줄 수 있다. (거의 안 쓰임, 알아만 두자)
+- flex-grow : item 이 화면을 자동으로 채우도록 한다. (화면이 커질 때 어떻게 채울지)
+- flex-shrink : 화면이 줄어들 때 item이 어떻게 줄어들지 설정.
+- flex-basis : item이 공간을 얼마나 차지할지에 대한 것을 세부적으로 설정. (기본값은 auto)
+- flex : flex-grow , flex-shrink, flex-basis 의 형식으로 합쳐서 쓸 수 있다.
+- align-self : item 별로 item을 정렬할 수 있다.
+
+---
+
+</br>
+
+## [2020/09/22]
+
+- 반응형 헤더 만들기 실습.
+
+→ media 쿼리 예시
+
+```css
+@media screen and (max-width : 768px){  // 너비가 일정 수준일 때 바꿔 줄 수 있다. 
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
     }
-};
 
-john.calcAge();     //propertiy 추가 
- 
-console.log(john);
-```
-</br>
-
-- **Hoisting → 코드 주석 참고**
-
-```jsx
-calculateAge(1999);   // 함수 선언 전에 함수를 호출 -> hoisting 이 되어 잘 작동한다. 
-
-function calculateAge(year){  // 함수 선언. 
-    console.log(2020 - year);
-}
-
-//retirement(1990);   // 작동하지 않는다
-
-var retirement = function(year) {     // 함수의 선언 방식이 아니기 떄문에 hoisting 되지 않는다. (only work on function declaration)
-    console.log(65- (2020- year));
-}
-
-//variables
-
-console.log(age); // 작동은 되지만 undefined로 뜬다. (hoisting) -> js 가 변수가 선언되었는지는 알고 있는 것이다. 
-
-var age = 50;  //global 
-
-console.log(age);
-
-function foo(){
-    var age = 65; //local
-    console.log(age);   //local print
-}
-
-foo();  
-console.log(age);  // global print
-```
-
-</br>
-
-- this → object 가 method 를 call 할 때만 할당이 된다.
-
-```jsx
-calAge(1996);
-
-function calAge(year){
-    console.log(2020-year);
-    console.log(this);  // this: global object -> window object 를 가리킴.
-}
-
-let john = {
-    name: 'john',
-    year: 1990,
-    cal : function () {
-        console.log(this);   // this 는 john object 를 가리킨다. 
-
-        function inner() {
-            console.log(this);      // window 를 가리킨다. default object = window. -> method가 아니기 때문이다. 
-        }
-
-        inner();
+    .navbar_menu{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
-};
 
-john.cal();
+    .navbar_menu li {
+        width: 100%; 
+        text-align: center;
+    }
 
-let mike ={
-    name: 'mike',
-    year: '1996',
-};
+    .navbar_icons {
+        display: none;
+        justify-content: center;
+        width: 100%;
+    }
 
-mike.cal = john.cal;  //method borrowing 
+    .navbar_toggle{
+        display: block;
+    }
 
-mike.cal();
+    .navbar_menu.active, 
+    .navbar_icons.active{
+        display: flex;
+    }
+}
 ```
+
+- max-width: 특정 너비 이하일 때 변경
+- min-width:  특정 너비 이상일 때 변경
