@@ -8,7 +8,9 @@
 
 :arrow_right:  목표 : 나만의 포트폴리오 사이트 만들기! :fire:
 
+:arrow_right: 앞으로 필요한 공부 : 리액트, CSS 기법, 서버 연동, JavaSript
 
+</br> 
 
 
 
