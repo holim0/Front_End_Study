@@ -1,6 +1,6 @@
 # 🍓Front-End Study🍓
 
-![JS](https://user-images.githubusercontent.com/48006103/94125371-38825500-fe91-11ea-9108-6877a74e2b7f.png)
+![JS](https://user-images.githubusercontent.com/48006103/94125371-38825500-fe91-11ea-9108-6877a74e2b7f.png){ : width ="200" height = "200" }
 
 </br>
 
