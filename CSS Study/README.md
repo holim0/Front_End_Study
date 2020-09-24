@@ -11,6 +11,7 @@
 :arrow_right: 공부해야 할 것 : FlexBox, Grid, media 쿼리
 
 
+</br>
 
 :book: 공부 기록지
 
