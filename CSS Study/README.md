@@ -1,6 +1,31 @@
 # ✨CSS_Study✨
 
+
+
+:arrow_right: CSS 기초 공부 공간.
+
+:arrow_right: 사용 언어 : CSS
+
+:arrow_right: 목표:bookmark: :  CSS 기초 뿌시기​
+
+
+
+:book: 공부 기록지
+
+| DATE | Tags | Files |
+| ---- | ---- | ----- |
+|      |      |       |
+
+
+
+
+
+
+
+
+
 - div : block
+
 - span : inline(크기 조절이 불가능)
 - Inline-block ( 두 가지 속성을 다 가지고 있다)
 - box-sizing : border-box(border, padding이 width 에 포함된다)  → 많이 쓰인다.
