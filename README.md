@@ -20,11 +20,12 @@
 
 :book:**공부 기록지**
 
-|    DATE    |             Tags              |                            Files                             |
-| :--------: | :---------------------------: | :----------------------------------------------------------: |
-| 2020/09/10 |     동기/비동기(Promisie)     | [:link:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/JS/20200910.md) |
-| 2020/09/14 |       Promise 추가 공부       | [:link:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/JS/20200914.md) |
-| 2020/09/22 | JS Basic (obeject and Method) | [:link:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/JS/20200922.md) |
+|    DATE    |               Tags                |                            Files                             |
+| :--------: | :-------------------------------: | :----------------------------------------------------------: |
+| 2020/09/10 |       동기/비동기(Promisie)       | [:link:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/JS/20200910.md) |
+| 2020/09/14 |         Promise 추가 공부         | [:link:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/JS/20200914.md) |
+| 2020/09/22 |   JS Basic (obeject and Method)   | [:link:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/JS/20200922.md) |
+| 2020/09/25 | DOM, querySelector, eventListener | [:link:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/JS/20200925.md) |
 
 </br>
 
