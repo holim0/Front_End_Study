@@ -1,4 +1,16 @@
 .container {
     display: flex;
-    flex-direction: column;
+    height: 100vh;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.item {
+    border: 2px solid red;
+
+    background-color: antiquewhite;
+}
+
+.item1 {
+    transform: scale3d(3);
 }
