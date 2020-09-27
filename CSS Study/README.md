@@ -27,7 +27,7 @@
 | **2020/09/18** |          **Margin, Padding, Position**          | **[:link:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/CSS/20200918.md)** |
 | **2020/09/21** |                   **FlexBox**                   | [:link:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/CSS/20200921.md) |
 | **2020/09/22** |              **반응형 헤더 실습**               | [:link:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/CSS/20200922.md) |
-| **2020/09/23** |                **FlexBox & Box**                | [:link:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/CSS/20200923.md) |
+| **2020/09/23** |               **FlexBox & Grid**                | [:link:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/CSS/20200923.md) |
 | **2020/09/26** | **translate 속성, css 가상 선택자, transition** | [:link:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/CSS/20200926.md) |
 
 
