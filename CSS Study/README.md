@@ -29,6 +29,7 @@
 | **2020/09/22** |              **반응형 헤더 실습**               | [:link:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/CSS/20200922.md) |
 | **2020/09/23** |               **FlexBox & Grid**                | [:link:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/CSS/20200923.md) |
 | **2020/09/26** | **translate 속성, css 가상 선택자, transition** | [:link:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/CSS/20200926.md) |
+| **2020/09/27** |              **Flex & Grid 복습**               | [:link:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/CSS/20200927.md) |
 
 
 
