@@ -27,6 +27,7 @@
 | **2020/09/22** |              **JS Basic (obeject and Method)**               | **[:link:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/JS/20200922.md)** |
 | **2020/09/25** |            **DOM, querySelector, eventListener**             | **[:link:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/JS/20200925.md)** |
 | **2020/09/28** | **OOP, Primitive vs Reference, Closure, Bind, call and apply** | [:link:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/JS/20200928.md) |
+| **2020/09/28** |           **JS ES6 (let, const, arrow function)**            | [:link:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/JS/20200928-1.md) |
 
 </br>
 
