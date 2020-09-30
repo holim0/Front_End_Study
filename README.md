@@ -29,8 +29,27 @@
 | **2020/09/28** | **OOP, Primitive vs Reference, Closure, Bind, call and apply** | [:floppy_disk:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/JS/20200928.md) |
 | **2020/09/28** |           **JS ES6 (let, const, arrow function)**            | [:floppy_disk:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/JS/20200928-1.md) |
 | **2020/09/29** |              **JS ES6(Map, class, array etc.)**              | [:floppy_disk:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/JS/20200929.md) |
+| **2020/09/30** |       **Asynchronous JS(Promise, Async/Await, AJAX)**        | [:floppy_disk:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/JS/20200930.md) |
 
 </br>
 
 </br>
 
+
+
+:book:**공부 기록지 2**
+
+| DATE | Tags | Files |
+| :--: | :--: | :---: |
+|      |      |       |
+|      |      |       |
+|      |      |       |
+|      |      |       |
+|      |      |       |
+|      |      |       |
+|      |      |       |
+|      |      |       |
+
+</br>
+
+</br>
