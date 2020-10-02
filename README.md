@@ -30,6 +30,7 @@
 | **2020/09/28** |           **JS ES6 (let, const, arrow function)**            | [:floppy_disk:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/JS/20200928-1.md) |
 | **2020/09/29** |              **JS ES6(Map, class, array etc.)**              | [:floppy_disk:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/JS/20200929.md) |
 | **2020/09/30** |       **Asynchronous JS(Promise, Async/Await, AJAX)**        | [:floppy_disk:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/JS/20200930.md) |
+| **2020/10/02** |                 **JS로 그림판 만들기 :art:**                 | [:floppy_disk:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/JS/20201002.md) |
 
 </br>
 
