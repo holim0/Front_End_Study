@@ -1,0 +1,22 @@
+/* @import "reset.css"; */
+
+body {
+    height: 100vh;
+    font-size: 3rem;
+}
+
+.js-clock {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form,
+.greetings {
+    display: none;
+}
+
+.showing {
+    display: block;
+}
