@@ -1,15 +1,63 @@
-/* @import "reset.css"; */
+@import "reset.css";
 
 body {
+    font-size: 4rem;
+    background-color: white;
+    color: white;
     height: 100vh;
-    font-size: 3rem;
 }
 
-.js-clock {
+.container {
     height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+.js-title {
+    font-size: 200%;
+    margin-bottom: 3rem;
+    color: #ffffa8;
+}
+
+.js-weather {
+    margin-top: 2rem;
+}
+
+.js-todoList {
+    font-size: 40%;
+}
+
+.js-todoList li {
+    display: flex;
+    align-items: baseline;
+    margin-top: 15px;
+}
+
+.js-todoForm input,
+.js-form.form input {
+    text-align: center;
+    border: 5px solid #07cf5c;
+    outline: 0;
+    height: 30px;
+    width: 300px;
+    border-radius: 5px;
+}
+
+button {
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    opacity: 1;
+    border: 0;
+    border-radius: 3px;
+    outline: 0;
+    margin-right: 10px;
+}
+
+button:active {
+    transform: scale(0.8);
 }
 
 .form,
@@ -19,4 +67,24 @@ body {
 
 .showing {
     display: block;
+    font-size: 80%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.bgimg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: fadeIn 0.5s linear;
 }
