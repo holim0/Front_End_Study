@@ -12,7 +12,7 @@
 
 :arrow_right:  목표 : 나만의 포트폴리오 사이트 만들기!(miniproject) :fire:
 
-:arrow_right: 앞으로 필요한 공부 : 리액트, CSS 기법, 서버 연동, JavaSript
+:arrow_right: 앞으로 필요한 공부 : 리액트, CSS 기법, 서버 연동, JavaSript, TypeScript
 
 </br> 
 
@@ -40,16 +40,16 @@
 
 :book:**공부 기록지 2**
 
-|      DATE      |          Tags           |                            Files                             |
-| :------------: | :---------------------: | :----------------------------------------------------------: |
-| **2020/10/02** | **JS로 크롬 앱 만들기** | [:floppy_disk:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/JS/20201004.md) |
-|                |                         |                                                              |
-|                |                         |                                                              |
-|                |                         |                                                              |
-|                |                         |                                                              |
-|                |                         |                                                              |
-|                |                         |                                                              |
-|                |                         |                                                              |
+|      DATE      |                      Tags                      |                            Files                             |
+| :------------: | :--------------------------------------------: | :----------------------------------------------------------: |
+| **2020/10/04** | **JS로 크롬 앱 만들기 :globe_with_meridians:** | [:floppy_disk:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/JS/20201004.md) |
+|                |                                                |                                                              |
+|                |                                                |                                                              |
+|                |                                                |                                                              |
+|                |                                                |                                                              |
+|                |                                                |                                                              |
+|                |                                                |                                                              |
+|                |                                                |                                                              |
 
 </br>
 

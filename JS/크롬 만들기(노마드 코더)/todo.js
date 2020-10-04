@@ -46,7 +46,7 @@ function handleSubmit(e) {
     e.preventDefault();
     const curValue = todoInput.value;
     paintToDo(curValue);
-    todoInput.value = "";
+    todoInput.value = ""; // text 필드 계속 초기화/
 }
 
 function loadTodos() {

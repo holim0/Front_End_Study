@@ -2,19 +2,34 @@ const COORDS = "coords";
 const API_KEY = "df19b5418880efdcdb43437a312a7917";
 const weather = document.querySelector(".js-weather");
 
-function getWeather(lat, lng) {
-    console.log(lat, lng);
-    fetch(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=metric`
-    )
-        .then((respon) => {
-            return respon.json(); //json 형태로 응답을 파싱한다.
-        })
-        .then((respon) => {
-            const temp = respon.main.temp;
-            const place = respon.name;
-            weather.innerText = `${temp} at ${place}`;
-        });
+// function getWeather(lat, lng) {
+//     fetch(
+//         `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=metric`
+//     )
+//         .then((respon) => {
+//             return respon.json(); //json 형태로 응답을 파싱한다.
+//         })
+//         .then((respon) => {
+//             const temp = respon.main.temp;
+//             const place = respon.name;
+//             weather.innerText = `${temp} at ${place}`;
+//         });
+// }
+
+async function getWeather(lat, lng) {
+    try {
+        const result = await fetch(
+            `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=metric`
+        );
+
+        const json = await result.json();
+
+        const temp = json.main.temp;
+        const place = json.name;
+        weather.innerText = `${temp} at ${place}`;
+    } catch {
+        alert("Error!");
+    }
 }
 
 function handleGeoSuces(pos) {

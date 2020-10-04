@@ -17,8 +17,6 @@ context.fillStyle = defaultColor;
 let painting = false;
 let filling = false;
 
-console.log(typeof colors);
-
 function stopPaint() {
     painting = false;
 }
