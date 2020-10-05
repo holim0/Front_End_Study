@@ -5,13 +5,20 @@
     "main": "index.js",
     "scripts": {
         "dev": "webpack --mode development",
-        "build": "webpack --mode production"
+        "build": "webpack --mode production",
+        "start": "webpack-dev-server --mode development --open"
     },
     "license": "MIT",
     "devDependencies": {
+        "babel-core": "6",
+        "babel-loader": "7",
+        "babel-preset-env": "1",
+        "html-webpack-plugin": "^4.5.0",
         "webpack": "^4.44.2",
         "webpack-cli": "^3.3.12",
         "webpack-dev-server": "^3.11.0"
     },
-    "dependencies": {}
+    "dependencies": {
+        "babel-polyfill": "6"
+    }
 }
