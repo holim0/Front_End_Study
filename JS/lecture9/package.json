@@ -1,0 +1,17 @@
+{
+    "name": "lecture9",
+    "version": "1.0.0",
+    "description": "project9",
+    "main": "index.js",
+    "scripts": {
+        "dev": "webpack --mode development",
+        "build": "webpack --mode production"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "webpack": "^4.44.2",
+        "webpack-cli": "^3.3.12",
+        "webpack-dev-server": "^3.11.0"
+    },
+    "dependencies": {}
+}
