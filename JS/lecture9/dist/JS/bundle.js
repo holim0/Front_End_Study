@@ -494,8 +494,8 @@
                 P = r(83),
                 F = r(33),
                 A = r(5),
-                j = r(26),
-                I = r(52),
+                I = r(26),
+                j = r(52),
                 N = r(51),
                 R = r(86),
                 T = r(46),
@@ -513,14 +513,14 @@
                 $ = Array.prototype,
                 J = f.ArrayBuffer,
                 K = f.DataView,
-                q = j(0),
-                X = j(2),
-                H = j(3),
-                Z = j(4),
-                Q = j(5),
-                tt = j(6),
-                nt = I(!0),
-                rt = I(!1),
+                q = I(0),
+                X = I(2),
+                H = I(3),
+                Z = I(4),
+                Q = I(5),
+                tt = I(6),
+                nt = j(!0),
+                rt = j(!1),
                 et = R.values,
                 it = R.keys,
                 ot = R.entries,
@@ -539,7 +539,7 @@
                 xt = c.CONSTR,
                 bt = c.TYPED,
                 mt = c.VIEW,
-                St = j(1, function (t, n) {
+                St = I(1, function (t, n) {
                     return Mt(N(t, t[yt]), n);
                 }),
                 wt = o(function () {
@@ -580,7 +580,7 @@
                         },
                     });
                 },
-                jt = function (t) {
+                It = function (t) {
                     var n,
                         r,
                         e,
@@ -612,7 +612,7 @@
                         i[n] = l ? s(c[n], n) : c[n];
                     return i;
                 },
-                It = function () {
+                jt = function () {
                     for (
                         var t = 0, n = arguments.length, r = Mt(this, n);
                         n > t;
@@ -877,7 +877,7 @@
                                           "SharedArrayBuffer" == f
                                       )
                                   )
-                                      return bt in r ? Ft(p, r) : jt.call(p, r);
+                                      return bt in r ? Ft(p, r) : It.call(p, r);
                                   (o = r), (v = Et(e, n));
                                   var y = r.byteLength;
                                   if (void 0 === i) {
@@ -927,7 +927,7 @@
                                               : new y(r)
                                           : bt in r
                                           ? Ft(p, r)
-                                          : jt.call(p, r)
+                                          : It.call(p, r)
                                       : new y(g(r))
                               );
                           })),
@@ -943,7 +943,7 @@
                           e || (_.constructor = p));
                     var F = _[pt],
                         A = !!F && ("values" == F.name || null == F.name),
-                        j = Dt.values;
+                        I = Dt.values;
                     h(p, gt, !0),
                         h(_, bt, a),
                         h(_, mt, !0),
@@ -964,7 +964,7 @@
                                         y.of.call(p, 1);
                                     }),
                             a,
-                            { from: jt, of: It }
+                            { from: It, of: jt }
                         ),
                         "BYTES_PER_ELEMENT" in _ ||
                             h(_, "BYTES_PER_ELEMENT", n),
@@ -997,8 +997,8 @@
                             a,
                             { toLocaleString: Rt }
                         ),
-                        (T[a] = A ? F : j),
-                        e || A || h(_, pt, j);
+                        (T[a] = A ? F : I),
+                        e || A || h(_, pt, I);
                 });
         } else t.exports = function () {};
     },
@@ -2294,8 +2294,8 @@
             P = m.log,
             F = m.LN2,
             A = i ? "_b" : "buffer",
-            j = i ? "_l" : "byteLength",
-            I = i ? "_o" : "byteOffset";
+            I = i ? "_l" : "byteLength",
+            j = i ? "_o" : "byteOffset";
         function N(t, n, r) {
             var e,
                 i,
@@ -2378,16 +2378,16 @@
         }
         function U(t, n, r, e) {
             var i = v(+r);
-            if (i + n > t[j]) throw S("Wrong index!");
+            if (i + n > t[I]) throw S("Wrong index!");
             var o = t[A]._b,
-                u = i + t[I],
+                u = i + t[j],
                 c = o.slice(u, u + n);
             return e ? c : c.reverse();
         }
         function V(t, n, r, e, i, o) {
             var u = v(+r);
-            if (u + n > t[j]) throw S("Wrong index!");
-            for (var c = t[A]._b, f = u + t[I], a = e(+i), s = 0; s < n; s++)
+            if (u + n > t[I]) throw S("Wrong index!");
+            for (var c = t[A]._b, f = u + t[j], a = e(+i), s = 0; s < n; s++)
                 c[f + s] = a[o ? s : n - s - 1];
         }
         if (u.ABV) {
@@ -2438,16 +2438,16 @@
             (x = function (t) {
                 s(this, x, "ArrayBuffer");
                 var n = v(t);
-                (this._b = g.call(new Array(n), 0)), (this[j] = n);
+                (this._b = g.call(new Array(n), 0)), (this[I] = n);
             }),
                 (b = function (t, n, r) {
                     s(this, b, "DataView"), s(t, x, "DataView");
-                    var e = t[j],
+                    var e = t[I],
                         i = l(n);
                     if (i < 0 || i > e) throw S("Wrong offset!");
                     if (i + (r = void 0 === r ? e - i : h(r)) > e)
                         throw S("Wrong length!");
-                    (this[A] = t), (this[I] = i), (this[j] = r);
+                    (this[A] = t), (this[j] = i), (this[I] = r);
                 }),
                 i &&
                     (G(x, "byteLength", "_l"),
@@ -3570,8 +3570,8 @@
             P = r(53),
             F = r(8),
             A = r(34),
-            j = M.f,
-            I = F.f,
+            I = M.f,
+            j = F.f,
             N = O.f,
             R = e.Symbol,
             T = e.JSON,
@@ -3592,21 +3592,21 @@
                     return (
                         7 !=
                         E(
-                            I({}, "a", {
+                            j({}, "a", {
                                 get: function () {
-                                    return I(this, "a", { value: 7 }).a;
+                                    return j(this, "a", { value: 7 }).a;
                                 },
                             })
                         ).a
                     );
                 })
                     ? function (t, n, r) {
-                          var e = j(V, n);
+                          var e = I(V, n);
                           e && delete V[n],
-                              I(t, n, r),
-                              e && t !== V && I(V, n, e);
+                              j(t, n, r),
+                              e && t !== V && j(V, n, e);
                       }
-                    : I,
+                    : j,
             J = function (t) {
                 var n = (G[t] = E(R.prototype));
                 return (n._k = t), n;
@@ -3629,9 +3629,9 @@
                         ? (r.enumerable
                               ? (i(t, L) && t[L][n] && (t[L][n] = !1),
                                 (r = E(r, { enumerable: _(0, !1) })))
-                              : (i(t, L) || I(t, L, _(1, {})), (t[L][n] = !0)),
+                              : (i(t, L) || j(t, L, _(1, {})), (t[L][n] = !0)),
                           $(t, n, r))
-                        : I(t, n, r)
+                        : j(t, n, r)
                 );
             },
             X = function (t, n) {
@@ -3657,7 +3657,7 @@
                 if (
                     ((t = S(t)), (n = w(n, !0)), t !== V || !i(G, n) || i(U, n))
                 ) {
-                    var r = j(t, n);
+                    var r = I(t, n);
                     return (
                         !r ||
                             !i(G, n) ||
@@ -5309,10 +5309,10 @@
                         if (v) {
                             var A = [E].concat(M, O, h);
                             void 0 !== F && A.push(F);
-                            var j = String(n.apply(void 0, A));
-                        } else j = d(E, h, O, M, F, n);
+                            var I = String(n.apply(void 0, A));
+                        } else I = d(E, h, O, M, F, n);
                         O >= w &&
-                            ((S += h.slice(w, O) + j), (w = O + E.length));
+                            ((S += h.slice(w, O) + I), (w = O + E.length));
                     }
                     return S + h.slice(w);
                 },
@@ -5539,8 +5539,8 @@
             P = f.Promise,
             F = "process" == s(E),
             A = function () {},
-            j = (i = b.f),
-            I = !!(function () {
+            I = (i = b.f),
+            j = !!(function () {
                 try {
                     var t = P.resolve(1),
                         n = ((t.constructor = {})[r(5)("species")] = function (
@@ -5674,7 +5674,7 @@
                     }
                 }
             };
-        I ||
+        j ||
             ((P = function (t) {
                 p(this, P, "Promise", "_h"), v(t), e.call(this);
                 try {
@@ -5693,7 +5693,7 @@
                     (this._n = !1);
             }).prototype = r(41)(P.prototype, {
                 then: function (t, n) {
-                    var r = j(g(this, P));
+                    var r = I(g(this, P));
                     return (
                         (r.ok = "function" != typeof t || t),
                         (r.fail = "function" == typeof n && n),
@@ -5714,20 +5714,20 @@
                     (this.resolve = a(W, t, 1)),
                     (this.reject = a(D, t, 1));
             }),
-            (b.f = j = function (t) {
+            (b.f = I = function (t) {
                 return t === P || t === u ? new o(t) : i(t);
             })),
-            l(l.G + l.W + l.F * !I, { Promise: P }),
+            l(l.G + l.W + l.F * !j, { Promise: P }),
             r(43)(P, "Promise"),
             r(38)("Promise"),
             (u = r(18).Promise),
-            l(l.S + l.F * !I, "Promise", {
+            l(l.S + l.F * !j, "Promise", {
                 reject: function (t) {
-                    var n = j(this);
+                    var n = I(this);
                     return (0, n.reject)(t), n.promise;
                 },
             }),
-            l(l.S + l.F * (c || !I), "Promise", {
+            l(l.S + l.F * (c || !j), "Promise", {
                 resolve: function (t) {
                     return w(c && this === u ? P : this, t);
                 },
@@ -5736,7 +5736,7 @@
                 l.S +
                     l.F *
                         !(
-                            I &&
+                            j &&
                             r(57)(function (t) {
                                 P.all(t).catch(A);
                             })
@@ -5745,7 +5745,7 @@
                 {
                     all: function (t) {
                         var n = this,
-                            r = j(n),
+                            r = I(n),
                             e = r.resolve,
                             i = r.reject,
                             o = m(function () {
@@ -5770,7 +5770,7 @@
                     },
                     race: function (t) {
                         var n = this,
-                            r = j(n),
+                            r = I(n),
                             e = r.reject,
                             i = m(function () {
                                 d(t, !1, function (t) {
@@ -7607,13 +7607,30 @@
         "use strict";
         var e,
             i = r(334),
-            o = (e = i) && e.__esModule ? e : { default: e };
-        console.log(o.default + " and 23");
+            o = ((e = i) && e.__esModule, r(335));
+        console.log(
+            "Using imported functions " +
+                (0, o.add)(o.ID, 2) +
+                ", " +
+                (0, o.mul)(o.ID, 3) +
+                ", " +
+                o.ID
+        );
     },
     function (t, n, r) {
         "use strict";
         Object.defineProperty(n, "__esModule", { value: !0 }),
-            console.log("import1!!!");
-        n.default = 99;
+            (n.default = "I am export");
+    },
+    function (t, n, r) {
+        "use strict";
+        Object.defineProperty(n, "__esModule", { value: !0 });
+        (n.add = function (t, n) {
+            return t + n;
+        }),
+            (n.mul = function (t, n) {
+                return t * n;
+            }),
+            (n.ID = 23);
     },
 ]);

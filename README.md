@@ -44,7 +44,7 @@
 | :------------: | :--------------------------------------------: | :----------------------------------------------------------: |
 | **2020/10/04** | **JS로 크롬 앱 만들기 :globe_with_meridians:** | [:floppy_disk:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/JS/20201004.md) |
 | **2020/10/05** |          **webpack, babel** :octocat:          | [:floppy_disk:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/JS/20201005.md) |
-|                |                                                |                                                              |
+| **2020/10/09** |            **api, axios** :pencil2:            | [:floppy_disk:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/JS/20201009.md) |
 |                |                                                |                                                              |
 |                |                                                |                                                              |
 |                |                                                |                                                              |
@@ -54,3 +54,4 @@
 </br>
 
 </br>
+
