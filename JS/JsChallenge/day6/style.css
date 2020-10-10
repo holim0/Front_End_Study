@@ -1,0 +1,17 @@
+body {
+    font-family: sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: black;
+}
+
+.bgimg {
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+}
