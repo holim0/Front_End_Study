@@ -1,0 +1,94 @@
+/* @import "./reset.css"; */
+
+body {
+    background-color: #f4f4f4;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    cursor: pointer;
+}
+
+.header {
+    max-width: 1140px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.menu,
+.menu2 {
+    display: flex;
+    list-style: none;
+}
+
+.menu li:hover {
+    color: #003c8f;
+}
+
+.menu li,
+.menu2 li {
+    padding-left: 40px;
+    cursor: pointer;
+}
+
+.menu2 {
+    height: 100%;
+    align-items: center;
+}
+
+.coin {
+    height: 25px;
+    width: auto;
+    margin-left: 5px;
+}
+
+.first_Section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 43.333vw;
+    min-height: 720px;
+    margin-top: 0;
+    padding-top: 160px;
+    background-image: url("./imgs/first_background.png");
+    background-size: cover;
+}
+.first_Section p {
+    margin: 0;
+}
+
+.first_Section .t1,
+.first_Section .t2 {
+    font-size: 40px;
+}
+
+.first_Section .t2 {
+    font-weight: 700;
+}
+
+.first_Section .t3 {
+    font-size: 15px;
+    font-weight: 100;
+    margin: 40px 0;
+}
+
+.more-btn {
+    cursor: pointer;
+    display: block;
+    font-size: 20px;
+    background-color: #0055b8;
+    color: white;
+    border: 0;
+    outline: 0;
+    height: 60px;
+    width: 180px;
+    border-radius: 8px;
+    transition: all 0.8s, color 0.3;
+}
+.more-btn:hover {
+    box-shadow: 200px 0 0 0 rgba(0, 0, 0, 0.5) inset;
+}
