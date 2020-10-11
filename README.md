@@ -46,7 +46,7 @@
 | **2020/10/05** |          **webpack, babel** :octocat:          | [:floppy_disk:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/JS/20201005.md) |
 | **2020/10/09** |            **api, axios** :pencil2:            | [:floppy_disk:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/JS/20201009.md) |
 | **2020/10/10** |         **++CSS, insertAdjacentHTML**          | [:floppy_disk:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/JS/20201010.md) |
-|                |                                                |                                                              |
+| **2020/10/11** |    **closest, dataset, slice, hashchange**     | [:floppy_disk:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/JS/20201011.md) |
 |                |                                                |                                                              |
 |                |                                                |                                                              |
 |                |                                                |                                                              |
