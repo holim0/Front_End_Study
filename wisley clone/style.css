@@ -5,7 +5,7 @@ body {
 }
 
 .logo {
-    height: 100px;
+    height: 50px;
     width: auto;
     cursor: pointer;
 }
@@ -19,31 +19,120 @@ body {
     margin: 0 auto;
 }
 
+.menuImg {
+    display: none;
+    height: 25px;
+    width: auto;
+}
+
 .menu,
 .menu2 {
     display: flex;
     list-style: none;
 }
 
-.menu li:hover {
+.menu li {
+    cursor: pointer;
+    padding: 8px 20px;
+}
+
+.menu2 div {
+    margin-left: 20px;
+}
+
+.basket {
+    display: flex;
+}
+
+.basketNumber {
+    color: white;
+    width: 19px;
+    height: 19px;
+    text-align: center;
+    background-color: gold;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+.menu li:hover,
+.menu2 li:hover {
     color: #003c8f;
 }
 
-.menu li,
-.menu2 li {
-    padding-left: 40px;
+.naver {
+    text-decoration: none;
+    color: white;
     cursor: pointer;
 }
+/* ///////////////////////////화면이 줄어들었을 때 ///////////////////////////*/
 
-.menu2 {
-    height: 100%;
-    align-items: center;
-}
+@media screen and (max-width: 768px) {
+    .header {
+        justify-content: center;
+        flex-direction: column;
+    }
 
-.coin {
-    height: 25px;
-    width: auto;
-    margin-left: 5px;
+    .menu,
+    .menu2 {
+        display: none;
+        align-self: flex-start;
+    }
+
+    .menu2 div {
+        margin-left: 0px;
+    }
+
+    .menu li,
+    .menu2 li {
+        padding-left: 0;
+        margin-top: 10px;
+    }
+
+    .menuImg {
+        display: block;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        z-index: 2;
+        transition: all 0.3s;
+    }
+
+    .menuImg.active {
+        position: absolute;
+        left: 250px;
+        transition: all 0.3s;
+    }
+
+    .menu.active,
+    .menu2.active {
+        display: flex;
+        color: white;
+        z-index: 2;
+        flex-direction: column;
+        margin-bottom: 30px;
+        width: 300px;
+    }
+
+    .sidebar {
+        width: 300px;
+        height: 100%;
+        background: dodgerblue;
+        opacity: 0.8;
+        position: fixed;
+        top: 0;
+        left: -300px;
+        z-index: 1;
+        transition: all 0.3s;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    body.active {
+        background-color: black;
+        z-index: 2;
+    }
 }
 
 .first_Section {
@@ -51,12 +140,47 @@ body {
     flex-direction: column;
     align-items: center;
     height: 43.333vw;
-    min-height: 720px;
+    min-height: 500px;
     margin-top: 0;
     padding-top: 160px;
-    background-image: url("./imgs/first_background.png");
+    background: url("./imgs/first_background.png");
     background-size: cover;
+    z-index: -1;
 }
+
+.second_Section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1e314a;
+    height: 500px;
+    min-width: 768px;
+    color: white;
+    padding: 120px 0;
+}
+
+.chart {
+    height: 305px;
+    width: 198px;
+    margin: 0 auto 38px;
+}
+
+.second_Section .title {
+    font-size: 40px;
+    margin-bottom: 28px;
+    line-height: 130%;
+}
+
+.second_Section .sub {
+    font-weight: 300;
+    font-size: 14px;
+    text-align: start;
+    letter-spacing: -0.06em;
+    line-height: 160%;
+    margin-bottom: 40px;
+}
+
 .first_Section p {
     margin: 0;
 }
