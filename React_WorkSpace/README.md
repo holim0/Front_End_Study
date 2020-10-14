@@ -24,9 +24,9 @@
 
 📖**공부 기록지**
 
-|      DATE      | Tags |                Files                |
-| :------------: | :--: | :---------------------------------: |
-| **2020/10/14** |      | [:open_file_folder:](www.naver.com) |
+|      DATE      |         Tags          |                            Files                             |
+| :------------: | :-------------------: | :----------------------------------------------------------: |
+| **2020/10/14** | **Todo_List Project** | [:open_file_folder:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/React/20201014.md) |
 
 
 
