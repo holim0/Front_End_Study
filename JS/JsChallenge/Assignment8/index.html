@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Random Number Game</h1>
+        <h2>Generate a number between 0 and 20</h2>
+        <div class="slidecontainer">
+            <input
+                list="ticks"
+                class="slider"
+                type="range"
+                name="scale"
+                min="0"
+                max="150"
+                step="5"
+                value="20"
+            />
+            <datalist id="ticks">
+                <option value="0"></option>
+                <option value="50"></option>
+                <option value="100"></option>
+                <option value="150"></option>
+            </datalist>
+        </div>
+
+        <h3>
+            Guess the number:
+            <input type="number" min="0" max="150" class="guess" />
+            <button class="btn">Play!</button>
+        </h3>
+
+        <h4 class="result"></h4>
+
+        <h4 class="result1"></h4>
+        <script src="index.js"></script>
+    </body>
+</html>
