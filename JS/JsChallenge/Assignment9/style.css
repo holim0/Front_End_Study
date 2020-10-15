@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+
+    background-color: dodgerblue;
+}
+
+h1 {
+    width: 330px;
+    text-align: right;
+}
+
+button {
+    font-size: 25px;
+    width: 100px;
+    height: 80px;
+    border-radius: 10px;
+    margin: 10px 10px 10px 0;
+    background-color: black;
+    color: white;
+    outline: 0;
+    border: 0;
+}
+
+button:active {
+    background-color: gray;
+    transform: scale(0.9);
+}
+
+.mul,
+.divide,
+.plus,
+.minus {
+    background-color: orange;
+}
+
+.zero {
+    width: 210px;
+}
