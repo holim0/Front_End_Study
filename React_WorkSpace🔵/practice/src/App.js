@@ -1,33 +1,42 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
-class Toggle extends Component {
+class NameForm extends Component {
     constructor(props) {
         super(props);
-        this.state = { isToggleOn: true };
+        this.state = { value: "" };
 
-        this.handleClick = this.handleClick.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleClick() {
-        this.setState((state) => ({
-            isToggleOn: !state.isToggleOn,
-        }));
+    handleChange(event) {
+        this.setState({ value: event.target.value });
+    }
+
+    handleSubmit(event) {
+        alert("A name was submitted: " + this.state.value);
+        event.preventDefault();
     }
 
     render() {
         return (
-            <button onClick={this.handleClick}>
-                {this.state.isToggleOn ? "ON" : "OFF"}
-            </button>
+            <form onSubmit={this.handleSubmit}>
+                <label>
+                    <input
+                        type="text"
+                        value={this.state.value}
+                        onChange={this.handleChange}
+                    />
+                </label>
+                <input type="submit" value="Submit" />
+            </form>
         );
     }
 }
 
 function App() {
-    return ReactDOM.render(<Toggle />, document.getElementById("root"));
+    return ReactDOM.render(<NameForm />, document.getElementById("root"));
 }
-
-setInterval(App, 1000);
 
 export default App;

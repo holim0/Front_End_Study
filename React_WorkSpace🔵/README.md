@@ -24,10 +24,11 @@
 
 📖**공부 기록지**
 
-|      DATE      |                Tags                |                            Files                             |
-| :------------: | :--------------------------------: | :----------------------------------------------------------: |
-| **2020/10/14** |       **Todo_List Project**        | [:open_file_folder:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/React/20201014.md) |
-| **2020/10/17** | **JSX, element, state, Binding ✨** | [:open_file_folder:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/React/20201016.md) |
+|      DATE      |                        Tags                        |                            Files                             |
+| :------------: | :------------------------------------------------: | :----------------------------------------------------------: |
+| **2020/10/14** |               **Todo_List Project**                | [:open_file_folder:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/React/20201014.md) |
+| **2020/10/17** |         **JSX, element, state, Binding ✨**         | [:open_file_folder:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/React/20201016.md) |
+| **2020/10/20** | **props, state, 비구조화 할당, 리스트, key, Form** | [:open_file_folder:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/React/20201020.md) |
 
 
 
