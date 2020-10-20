@@ -29,6 +29,7 @@
 | **2020/10/14** |               **Todo_List Project**                | [:open_file_folder:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/React/20201014.md) |
 | **2020/10/17** |         **JSX, element, state, Binding ✨**         | [:open_file_folder:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/React/20201016.md) |
 | **2020/10/20** | **props, state, 비구조화 할당, 리스트, key, Form** | [:open_file_folder:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/React/20201020.md) |
+| **2020/10/21** |         **영화 검색 프로젝트(api를 통해)**         | [:open_file_folder:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/React/20201021.md) |
 
 
 
