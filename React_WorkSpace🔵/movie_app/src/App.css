@@ -1,0 +1,45 @@
+.display_movie {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 50px;
+    column-gap: 100px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input {
+    width: 500px;
+    font-size: 50px;
+    border: 5px solid dodgerblue;
+    border-radius: 8px;
+}
+
+.search {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.btn {
+    width: 50px;
+    height: 70px;
+    background-color: dodgerblue;
+    border: none;
+    outline: 0;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 15px;
+    margin: 4px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.btn:active {
+    transform: scale(0.9);
+}

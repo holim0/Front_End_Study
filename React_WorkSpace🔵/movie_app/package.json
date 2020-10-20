@@ -1,0 +1,37 @@
+{
+    "name": "movie_app",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@testing-library/jest-dom": "^4.2.4",
+        "@testing-library/react": "^9.3.2",
+        "@testing-library/user-event": "^7.1.2",
+        "axios": "^0.20.0",
+        "prop-types": "^15.7.2",
+        "react": "^16.14.0",
+        "react-dom": "^16.14.0",
+        "react-emoji-render": "^1.2.4",
+        "react-scripts": "3.4.3"
+    },
+    "scripts": {
+        "start": "BROWSER='google chrome' react-scripts start",
+        "build": "BROWSER='google chrome' react-scripts build",
+        "test": "BROWSER='google chrome' react-scripts test",
+        "eject": "BROWSER='google chrome' react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
+}
