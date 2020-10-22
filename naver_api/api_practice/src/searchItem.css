@@ -1,0 +1,11 @@
+.poster {
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
+}
+
+.seperContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
