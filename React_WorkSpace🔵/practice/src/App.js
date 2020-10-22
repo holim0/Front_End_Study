@@ -1,42 +1,25 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 
-class NameForm extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { value: "" };
+function Example() {
+    // "count"라는 새 상태 변수를 선언합니다
+    const [count, setCount] = useState(0);
 
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
+    useEffect(() => {
+        // 브라우저 API를 이용해 문서의 타이틀을 업데이트합니다
+        document.title = `You clicked ${count} times`;
+    });
 
-    handleChange(event) {
-        this.setState({ value: event.target.value });
-    }
-
-    handleSubmit(event) {
-        alert("A name was submitted: " + this.state.value);
-        event.preventDefault();
-    }
-
-    render() {
-        return (
-            <form onSubmit={this.handleSubmit}>
-                <label>
-                    <input
-                        type="text"
-                        value={this.state.value}
-                        onChange={this.handleChange}
-                    />
-                </label>
-                <input type="submit" value="Submit" />
-            </form>
-        );
-    }
+    return (
+        <div>
+            <p>You clicked {count} times</p>
+            <button onClick={() => setCount(count + 1)}>Click me</button>
+        </div>
+    );
 }
 
 function App() {
-    return ReactDOM.render(<NameForm />, document.getElementById("root"));
+    return ReactDOM.render(<Example />, document.getElementById("root"));
 }
 
 export default App;
