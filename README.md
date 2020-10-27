@@ -8,7 +8,7 @@
 
 
 
-✅ [리액트 공부 공간](https://github.com/holim0/Front_End_Study/tree/master/React_WorkSpace🔵)
+✅ [리액트 공부 공간](https://github.com/holim0/Front_End_Study/tree/master/React_WorkSpace🌐)
 
 ✅ [TypeScript WorkSpace](https://github.com/holim0/Front_End_Study/tree/master/TypeScript%20🟦)
 
