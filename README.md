@@ -10,6 +10,8 @@
 
 ✅ [리액트 공부 공간](https://github.com/holim0/Front_End_Study/tree/master/React_WorkSpace🔵)
 
+✅ [TypeScript WorkSpace](https://github.com/holim0/Front_End_Study/tree/master/TypeScript%20🟦)
+
 :arrow_right:  프론트 엔드 공부 공간
 
 :arrow_right:  사용언어 :  JavaSript(현재 주로 공부 중), HTML, REACT(공부 예정)
