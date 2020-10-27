@@ -37,16 +37,15 @@ class Main extends Component {
         } = await axios.get(url);
 
         if (movies === undefined) {
-            this.setState({ done: false, isLoading: false });
+            this.setState({ done: false, isLoading: false, search: "" });
         }
 
         if (this.state.done) {
-            this.setState({ movies, done: true, isLoading: false });
-            this.setState({ search: "" });
+            this.setState({ movies, done: true, isLoading: false, search: "" });
         }
 
         value.classList.remove("active");
-        // console.log(this.state.movies);
+        console.log(this.state.movies);
     };
 
     handleKeyPress = (e) => {
@@ -57,7 +56,7 @@ class Main extends Component {
 
     render() {
         const { movies, done, isLoading } = this.state;
-        console.log(done, isLoading, movies.length);
+
         return (
             <div>
                 <div className="header">
@@ -81,28 +80,30 @@ class Main extends Component {
                         </button>
                     </div>
                 </div>
-
-                <section className="display_movie">
+                <div>
                     {isLoading ? (
                         <h1 className="loading" id="loader">
                             🤔
                         </h1>
                     ) : done ? (
-                        movies.map((movie) => (
-                            <Movie
-                                key={movie.id}
-                                id={movie.id}
-                                year={movie.year}
-                                title={movie.title}
-                                summary={movie.summary}
-                                poster={movie.medium_cover_image}
-                                genres={movie.genres}
-                            />
-                        ))
+                        <section className="display_movie">
+                            {movies.map((movie) => (
+                                <Movie
+                                    key={movie.id}
+                                    id={movie.id}
+                                    year={movie.year}
+                                    title={movie.title}
+                                    summary={movie.summary}
+                                    poster={movie.medium_cover_image}
+                                    genres={movie.genres}
+                                    url={movie.url}
+                                />
+                            ))}
+                        </section>
                     ) : (
                         <h1 className="Not_Found">Not Found! 🥺</h1>
                     )}
-                </section>
+                </div>
             </div>
         );
     }

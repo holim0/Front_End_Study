@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./movie.css";
 
-function Movie({ id, year, title, summary, poster, genres, flag }) {
+function Movie({ id, year, title, summary, poster, genres, url }) {
     return (
         <div>
             <img
@@ -11,9 +11,12 @@ function Movie({ id, year, title, summary, poster, genres, flag }) {
                 alt={title}
                 title={title}
             ></img>
-            <h4>
-                {title} {year}
-            </h4>
+            <a href={url}>
+                <h1>
+                    {title} {year}
+                </h1>
+            </a>
+
             <section className="genre">
                 Genres:
                 {genres.map((genre) => (
