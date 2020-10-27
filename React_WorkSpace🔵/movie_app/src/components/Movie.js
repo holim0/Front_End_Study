@@ -4,7 +4,6 @@ import "./movie.css";
 
 function Movie({ id, year, title, summary, poster, genres, flag }) {
     return (
-        {flag ? (
         <div>
             <img
                 className="poster"
@@ -28,12 +27,6 @@ function Movie({ id, year, title, summary, poster, genres, flag }) {
             </section>
             <h4>{summary}</h4>
         </div>
-        ) :(<h1>Not found! 🥺</h1>)
-        
-        
-        
-        
-        } 
     );
 }
 

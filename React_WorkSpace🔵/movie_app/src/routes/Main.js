@@ -24,6 +24,7 @@ class Main extends Component {
         value.classList.add("active");
         this.setState({ movies: [] });
         if (this.state.search === "") {
+            this.setState({ done: false, isLoading: false });
             return;
         }
         document.querySelector(".input").value = "";
@@ -34,9 +35,9 @@ class Main extends Component {
                 data: { movies },
             },
         } = await axios.get(url);
-        console.log(movies);
+
         if (movies === undefined) {
-            this.setState({ done: false });
+            this.setState({ done: false, isLoading: false });
         }
 
         if (this.state.done) {
@@ -56,7 +57,7 @@ class Main extends Component {
 
     render() {
         const { movies, done, isLoading } = this.state;
-        console.log(done, isLoading);
+        console.log(done, isLoading, movies.length);
         return (
             <div>
                 <div className="header">
@@ -86,7 +87,7 @@ class Main extends Component {
                         <h1 className="loading" id="loader">
                             🤔
                         </h1>
-                    ) : (
+                    ) : done ? (
                         movies.map((movie) => (
                             <Movie
                                 key={movie.id}
@@ -96,9 +97,10 @@ class Main extends Component {
                                 summary={movie.summary}
                                 poster={movie.medium_cover_image}
                                 genres={movie.genres}
-                                flag={done}
                             />
                         ))
+                    ) : (
+                        <h1 className="Not_Found">Not Found! 🥺</h1>
                     )}
                 </section>
             </div>
