@@ -1,8 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./movie.css";
 
-function Movie({ id, year, title, summary, poster }) {
+function Movie({ id, year, title, summary, poster, genres, flag }) {
     return (
+        {flag ? (
         <div>
             <img
                 className="poster"
@@ -13,8 +15,25 @@ function Movie({ id, year, title, summary, poster }) {
             <h4>
                 {title} {year}
             </h4>
+            <section className="genre">
+                Genres:
+                {genres.map((genre) => (
+                    <li
+                        style={{ diplay: "inline" }}
+                        key={genres.indexOf(genre)}
+                    >
+                        {genre}
+                    </li>
+                ))}
+            </section>
             <h4>{summary}</h4>
         </div>
+        ) :(<h1>Not found! 🥺</h1>)
+        
+        
+        
+        
+        } 
     );
 }
 

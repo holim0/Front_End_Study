@@ -1,0 +1,8 @@
+.genre {
+    list-style: none;
+    display: flex;
+}
+.genre li {
+    margin-left: 20px;
+    color: #f57c00;
+}
