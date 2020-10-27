@@ -1,9 +1,9 @@
-let val: number = 12;
-
-console.log(val);
-
-function fun(a: number, b: number): number {
-    return a + b;
+class Foo {
+    // x는 생성자 내부에서만 유효한 지역 변수이다.
+    constructor(public x: string) {
+        console.log(x);
+    }
 }
 
-console.log(fun(10, 12));
+const foo = new Foo("Hello");
+console.log(foo); //

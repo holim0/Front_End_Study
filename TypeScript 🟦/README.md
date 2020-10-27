@@ -10,12 +10,13 @@
 
 **공부기록지** 📚
 
-| DATE | Tags | Files |
-| :--: | :--: | :---: |
-|      |      |       |
+|      DATE      |            Tags            |                            Files                             |
+| :------------: | :------------------------: | :----------------------------------------------------------: |
+| **2020/10/28** | **TypeScript Declaration** | [🗂](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/TS/20201028.md) |
 
 
 
 
 
 </br></br></br>
+
