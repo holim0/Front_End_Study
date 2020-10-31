@@ -1,9 +1,6 @@
-class Foo {
-    // x는 생성자 내부에서만 유효한 지역 변수이다.
-    constructor(public x: string) {
-        console.log(x);
-    }
+function printLabel(labeledObj: { label: number }) {
+    console.log(labeledObj.label);
 }
 
-const foo = new Foo("Hello");
-console.log(foo); //
+let myObj = { size: 10, label: "Size 10 Object" };
+printLabel(myObj);
