@@ -1,6 +1,13 @@
-function printLabel(labeledObj: { label: number }) {
-    console.log(labeledObj.label);
+interface Person {
+    name: string;
+    age?: number; // 선택적 프로퍼티
 }
 
-let myObj = { size: 10, label: "Size 10 Object" };
-printLabel(myObj);
+interface Student extends Person {
+    grade: number;
+}
+
+const student: Student = {
+    name: "Lee",
+    grade: 3,
+};
