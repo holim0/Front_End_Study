@@ -29,7 +29,8 @@ class GetShopping extends Component {
                 } = await axios.get("/v1/search/shop.json", {
                     params: {
                         query: q,
-                        display: 20,
+                        display: 10,
+                        sort: "sim",
                     },
                     headers: {
                         "X-Naver-Client-Id": ID,
