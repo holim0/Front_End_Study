@@ -82,7 +82,7 @@ class GetShopping extends Component {
                             name={item.title}
                             category={item.category2}
                             image={item.image}
-                            brand={item.brand}
+                            brand={item.maker}
                         />
                     ))}
                 </section>
