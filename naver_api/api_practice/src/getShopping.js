@@ -29,7 +29,7 @@ class GetShopping extends Component {
                 } = await axios.get("/v1/search/shop.json", {
                     params: {
                         query: q,
-                        display: 10,
+                        display: 1,
                         sort: "sim",
                     },
                     headers: {
@@ -56,7 +56,7 @@ class GetShopping extends Component {
         const { getItems, handleInput, saveQuery } = this;
         const { items, search } = this.state;
         return (
-            <div>
+            <div className="main_container">
                 <div className="head">
                     <h1 className="title">전자제품을 검색해주세요 💻</h1>
                     <div className="search">

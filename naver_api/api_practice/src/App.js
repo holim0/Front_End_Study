@@ -2,11 +2,7 @@ import React from "react";
 import GetShopping from "./getShopping";
 
 function App() {
-    return (
-        <div>
-            <GetShopping />
-        </div>
-    );
+    return <GetShopping />;
 }
 
 export default App;
