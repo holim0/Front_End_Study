@@ -26,7 +26,7 @@ const TVApi = {
 const MovieApi = {
     nowPlaying: () => Api.get("movie/now_playing"),
     getPopular: () => Api.get("movie/popular"),
-    getTopRate: () => Api.get("movie/top_rated"),
+    getUpcoming: () => Api.get("movie/upcoming"),
     movieDetail: (id) =>
         Api.get("movie/${id}", {
             params: {
