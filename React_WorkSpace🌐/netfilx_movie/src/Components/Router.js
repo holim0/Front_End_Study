@@ -1,18 +1,23 @@
 import React, { Component } from "react";
-import { HashRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
 import Home from "Routes/Home";
-import Search from "Routes/Home";
-import Detail from "Routes/Home";
-import TV from "Routes/Home";
+import Search from "Routes/Search";
+import TV from "Routes/TV";
+import Header from "Components/Header";
 
 function Router() {
     return (
-        <HashRouter>
-            <Route path="/" exact component={Home} />
-            <Route path="/detail" exact component={Detail} />
-            <Route path="/tv" exact component={TV} />
-            <Route path="/search" exact component={Search} />
-        </HashRouter>
+        <BrowserRouter>
+            <>
+                <Header />
+                <Switch>
+                    <Route path="/" exact component={Home} />
+                    <Route path="/tv" component={TV} />
+                    <Route path="/search" component={Search} />
+                    <Redirect from="*" to="/" />
+                </Switch>
+            </>
+        </BrowserRouter>
     );
 }
 
