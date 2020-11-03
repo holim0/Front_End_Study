@@ -34,6 +34,25 @@
 | **2020/10/23** |             **전자제품 평점 프로젝트**             | [:open_file_folder:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/React/20201023.md) |
 | **2020/10/27** |                  **React Router**                  | [:open_file_folder:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/React/20201027.md) |
 | **2020/11/01** |               **Styled-components**                | [:open_file_folder:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/React/20201101.md) |
+| **2020/11/03** |                **Netflix-project**                 | [:open_file_folder:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/React/20201103.md) |
+
+
+
+</br>
+
+
+
+| DATE | Tags | Files |
+| :--: | :--: | :---: |
+|      |      |       |
+|      |      |       |
+|      |      |       |
+|      |      |       |
+|      |      |       |
+|      |      |       |
+|      |      |       |
+|      |      |       |
+|      |      |       |
 
 
 
