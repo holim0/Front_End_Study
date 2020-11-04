@@ -11,9 +11,14 @@ const Api = axios.create({
 
 const TVApi = {
     getPopular: () => Api.get("tv/popular"),
-    getAiringToday: () => Api.get("ttv/airing_today"),
+    getAiringToday: () => Api.get("tv/airing_today"),
     getTopRate: () => Api.get("tv/top_rated"),
-    tvDetail: (id) => Api.get("tv/${id}"),
+    tvDetail: (id) =>
+        Api.get(`tv/${id}`, {
+            params: {
+                append_to_response: "videos",
+            },
+        }),
 
     searchTv: (word) =>
         Api.get("search/tv", {
@@ -28,7 +33,7 @@ const MovieApi = {
     getPopular: () => Api.get("movie/popular"),
     getUpcoming: () => Api.get("movie/upcoming"),
     movieDetail: (id) =>
-        Api.get("movie/${id}", {
+        Api.get(`movie/${id}`, {
             params: {
                 append_to_response: "videos",
             },
