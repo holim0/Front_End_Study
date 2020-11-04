@@ -9,19 +9,16 @@ const SearchContainer = () => {
     const [error, setError] = useState({});
     const [loading, setLoading] = useState(false);
 
-    // useEffect(() => {
-    //     handleInput();
-    // }, [searchWord]);
-
     const handleInput = (e) => {
         e.preventDefault();
-        console.log(e.target.value);
-        handleSearchWord(e.value);
+        console.log(searchWord);
         if (searchWord !== "") {
             Search(searchWord);
         }
     };
-
+    const updateInput = (e) => {
+        handleSearchWord(e.target.value);
+    };
     const Search = async (word) => {
         try {
             const {
@@ -48,7 +45,8 @@ const SearchContainer = () => {
             error={error}
             loading={loading}
             handleInput={handleInput}
-        />
+            updateInput={updateInput}
+        ></SearchPresenter>
     );
 };
 

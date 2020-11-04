@@ -21,8 +21,8 @@ function HomePresenter({
         <Container>
             {nowPlaying && nowPlaying.length > 0 && (
                 <Section title="Now Playing Movie">
-                    {nowPlaying.map((movie) => (
-                        <span>{movie.title}</span>
+                    {nowPlaying.map((m) => (
+                        <span key={m.id}>{m.title}</span>
                     ))}
                 </Section>
             )}
@@ -30,14 +30,14 @@ function HomePresenter({
             {getPopular && getPopular.length > 0 && (
                 <Section title="Popular Moive">
                     {getPopular.map((m) => (
-                        <span>{m.title}</span>
+                        <span key={m.id}>{m.title}</span>
                     ))}
                 </Section>
             )}
             {getUpcoming && getUpcoming.length > 0 && (
                 <Section title="Upcoming Moive">
                     {getUpcoming.map((m) => (
-                        <span>{m.title}</span>
+                        <span key={m.id}>{m.title}</span>
                     ))}
                 </Section>
             )}

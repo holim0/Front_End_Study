@@ -17,6 +17,7 @@ const Title = styled.h1`
 const Grid = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fill, 150px);
+    justify-content: center;
 `;
 
 const Section = ({ title, children }) => {

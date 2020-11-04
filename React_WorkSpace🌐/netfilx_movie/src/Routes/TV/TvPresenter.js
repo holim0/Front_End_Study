@@ -22,14 +22,14 @@ const TvPresenter = ({
             {getPopular && getPopular.length > 0 && (
                 <Section title="Popular TV Show">
                     {getPopular.map((m) => (
-                        <span>{m.name}</span>
+                        <span key={m.id}>{m.name}</span>
                     ))}
                 </Section>
             )}
             {getAiringToday && getAiringToday.length > 0 && (
                 <Section title="AiringToday TV Show">
                     {getAiringToday.map((m) => (
-                        <span>{m.name}</span>
+                        <span key={m.id}>{m.name}</span>
                     ))}
                 </Section>
             )}
@@ -37,7 +37,7 @@ const TvPresenter = ({
             {getTopRate && getTopRate.length > 0 && (
                 <Section title="TopRate TV Show">
                     {getTopRate.map((m) => (
-                        <span>{m.name}</span>
+                        <span key={m.id}>{m.name}</span>
                     ))}
                 </Section>
             )}

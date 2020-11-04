@@ -5,7 +5,7 @@ const Api = axios.create({
     baseURL: "https://api.themoviedb.org/3/",
     params: {
         api_key: "6ce5872428496fc4ad2bc70ae37af5ee",
-        language: "kr",
+        language: "ko",
     },
 });
 
@@ -23,7 +23,7 @@ const TVApi = {
     searchTv: (word) =>
         Api.get("search/tv", {
             params: {
-                query: encodeURIComponent(word),
+                query: word,
             },
         }),
 };
@@ -42,7 +42,7 @@ const MovieApi = {
     searchMovie: (word) =>
         Api.get("search/movie", {
             params: {
-                query: encodeURIComponent(word),
+                query: word,
             },
         }),
 };
