@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Loader from "Components/Loader";
 import Section from "Components/Section";
-import Error from "Components/Error";
+import Poster from "Components/Poster";
 
 const Container = styled.div`
     padding: 0px 20px;
@@ -31,12 +31,12 @@ function SearchPresenter({
     searchWord,
     error,
     loading,
-    handleInput,
+    pushEnter,
     updateInput,
 }) {
     return (
         <Container>
-            <Form onSubmit={handleInput}>
+            <Form onSubmit={pushEnter}>
                 <Input
                     placeholder="Search Movie or TV Shows"
                     value={searchWord}
@@ -50,9 +50,23 @@ function SearchPresenter({
                     {movieResults && movieResults.length > 0 && (
                         <Section title="Movies">
                             {movieResults.map((m) => (
-                                <span key={m.id}>{m.title}</span>
+                                <Poster
+                                    key={m.id}
+                                    id={m.id}
+                                    imgUrl={m.poster_path}
+                                    title={m.title}
+                                    rating={m.vote_average}
+                                    year={
+                                        m.release_date &&
+                                        m.release_date.substring(0, 4)
+                                    }
+                                    isMovie={true}
+                                />
                             ))}
                         </Section>
+                    )}
+                    {movieResults && movieResults.length < 1 && (
+                        <Section title="Movies">Not Found!</Section>
                     )}
                 </>
             )}
@@ -64,9 +78,22 @@ function SearchPresenter({
                     {tvResults && tvResults.length > 0 && (
                         <Section title="TV Shows">
                             {tvResults.map((m) => (
-                                <span key={m.id}>{m.name}</span>
+                                <Poster
+                                    key={m.id}
+                                    id={m.id}
+                                    imgUrl={m.poster_path}
+                                    title={m.name}
+                                    rating={m.vote_average}
+                                    year={
+                                        m.release_date &&
+                                        m.release_date.substring(0, 4)
+                                    }
+                                />
                             ))}
                         </Section>
+                    )}
+                    {tvResults && tvResults.length < 1 && (
+                        <Section title="TV Shows">Not Found!</Section>
                     )}
                 </>
             )}

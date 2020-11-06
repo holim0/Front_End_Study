@@ -8,11 +8,9 @@ const SearchContainer = () => {
     const [searchWord, handleSearchWord] = useState("");
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
-    const [event, handleEvent] = useState(null);
 
-    const handleInput = (e) => {
+    const pushEnter = (e) => {
         e.preventDefault();
-        handleEvent(e);
         if (searchWord !== "") {
             Search(searchWord);
         }
@@ -34,7 +32,7 @@ const SearchContainer = () => {
             handleMovieResults(movieInfo);
             handleTvResults(tvInfo);
         } catch {
-            setError("Cant find information!");
+            setError("Can't find information!");
         } finally {
             setLoading(false);
         }
@@ -47,7 +45,7 @@ const SearchContainer = () => {
             searchWord={searchWord}
             error={error}
             loading={loading}
-            handleInput={handleInput}
+            pushEnter={pushEnter}
             updateInput={updateInput}
         ></SearchPresenter>
     );

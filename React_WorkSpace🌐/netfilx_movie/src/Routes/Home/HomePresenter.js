@@ -3,6 +3,8 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import Section from "Components/Section";
 import Loader from "Components/Loader";
+import Error from "Components/Error";
+import Poster from "Components/Poster";
 
 const Container = styled.div`
     padding: 0px 20px;
@@ -20,27 +22,59 @@ const HomePresenter = ({
     ) : (
         <Container>
             {nowPlaying && nowPlaying.length > 0 && (
-                <Section title="Now Playing Movie">
+                <Section title="Now Playing Movies">
                     {nowPlaying.map((m) => (
-                        <span key={m.id}>{m.title}</span>
+                        <Poster
+                            key={m.id}
+                            id={m.id}
+                            imgUrl={m.poster_path}
+                            title={m.title}
+                            rating={m.vote_average}
+                            year={
+                                m.release_date && m.release_date.substring(0, 4)
+                            }
+                            isMovie={true}
+                        />
                     ))}
                 </Section>
             )}
 
             {getPopular && getPopular.length > 0 && (
-                <Section title="Popular Moive">
+                <Section title="Popular Moives">
                     {getPopular.map((m) => (
-                        <span key={m.id}>{m.title}</span>
+                        <Poster
+                            key={m.id}
+                            id={m.id}
+                            imgUrl={m.poster_path}
+                            title={m.title}
+                            rating={m.vote_average}
+                            year={
+                                m.release_date && m.release_date.substring(0, 4)
+                            }
+                            isMovie={true}
+                        />
                     ))}
                 </Section>
             )}
             {getUpcoming && getUpcoming.length > 0 && (
-                <Section title="Upcoming Moive">
+                <Section title="Upcoming Moives">
                     {getUpcoming.map((m) => (
-                        <span key={m.id}>{m.title}</span>
+                        <Poster
+                            key={m.id}
+                            id={m.id}
+                            imgUrl={m.poster_path}
+                            title={m.title}
+                            rating={m.vote_average}
+                            year={
+                                m.release_date && m.release_date.substring(0, 4)
+                            }
+                            isMovie={true}
+                        />
                     ))}
                 </Section>
             )}
+
+            {error && <Error text={error}></Error>}
         </Container>
     );
 

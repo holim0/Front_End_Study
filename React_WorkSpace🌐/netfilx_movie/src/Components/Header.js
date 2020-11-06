@@ -49,13 +49,13 @@ function Header({ location: { pathname } }) {
         <Header2>
             <Head>
                 <Item cur={pathname === "/"}>
-                    <Slist to="/">Movies</Slist>
+                    <Slist to="/">영화</Slist>
                 </Item>
                 <Item cur={pathname === "/tv"}>
-                    <Slist to="/tv">TV</Slist>
+                    <Slist to="/tv">TV 프로그램</Slist>
                 </Item>
                 <Item cur={pathname === "/search"}>
-                    <Slist to="/search">Search</Slist>
+                    <Slist to="/search">검색</Slist>
                 </Item>
             </Head>
         </Header2>

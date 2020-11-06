@@ -21,11 +21,12 @@ const TvContainer = () => {
                 data: { results: TopRate },
             } = await Api.TVApi.getTopRate();
 
+            console.log(Popular);
             handleGetPopular(Popular);
             handleGetAiringToday(AringToday);
             handlegetTopRate(TopRate);
         } catch {
-            setError("Cant find TV information");
+            setError("Can't find TV information");
         } finally {
             setLoading(false);
         }

@@ -22,6 +22,8 @@ const HomeContainer = () => {
             const {
                 data: { results: getPopular },
             } = await Api.MovieApi.getPopular();
+
+            console.log(nowPlaying);
             handleNowPlaying(nowPlaying);
             handleGetupcoming(getUpcoming);
             handleGetPopular(getPopular);
