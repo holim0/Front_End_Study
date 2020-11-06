@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { animated, useSpring } from "react-spring";
+import { useScroll } from "react-use-gesture";
 
 const Container = styled.div`
     margin-left: 30px;
@@ -10,7 +12,8 @@ const Container = styled.div`
 
 const Img = styled.div`
     background-image: url(${(props) => props.bgUrl});
-    height: 180px;
+    height: 300px;
+    width: 200px;
     background-size: cover;
     background-position: center center;
     border-radius: 5px;
@@ -23,6 +26,7 @@ const Rating = styled.span`
     right: 5px;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
+    font-size: 20px;
 `;
 const ImgContainer = styled.div`
     position: relative;
@@ -47,10 +51,25 @@ const Year = styled.span`
     color: rgba(255, 255, 255, 0.5);
 `;
 
+const clamp = (value, clampAt = 30) => {
+    if (value > 0) {
+        return value > clampAt ? clampAt : value;
+    } else {
+        return value < -clampAt ? -clampAt : value;
+    }
+};
+
 const Poster = ({ id, imgUrl, title, rating, year, isMovie = false }) => {
+    const style = useSpring({
+        from: {
+            transform: "perspective(500px) rotateY(0deg)",
+        },
+        transform: "perspective(500px) rotateY(25deg)",
+    });
+
     return (
         <Link to={isMovie ? `/movie/${id}` : `/show/${id}`}>
-            <Container>
+            <Container as={animated.div} style={style}>
                 <ImgContainer>
                     <Img
                         bgUrl={
@@ -62,7 +81,7 @@ const Poster = ({ id, imgUrl, title, rating, year, isMovie = false }) => {
                     <Rating>⭐️{rating}/10</Rating>
                 </ImgContainer>
                 <Title>
-                    {title.length > 10 ? `${title.substring(0, 10)}...` : title}
+                    {title.length > 15 ? `${title.substring(0, 15)}...` : title}
                 </Title>
                 <Year>{year}</Year>
             </Container>

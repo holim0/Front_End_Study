@@ -16,8 +16,8 @@ const HomePresenter = ({
     getUpcoming,
     error,
     loading,
-}) =>
-    loading ? (
+}) => {
+    return loading ? (
         <Loader />
     ) : (
         <Container>
@@ -77,6 +77,7 @@ const HomePresenter = ({
             {error && <Error text={error}></Error>}
         </Container>
     );
+};
 
 HomePresenter.propTypes = {
     nowPlaying: PropTypes.array,

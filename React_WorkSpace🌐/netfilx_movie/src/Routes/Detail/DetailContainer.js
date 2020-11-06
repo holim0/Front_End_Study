@@ -46,7 +46,7 @@ const HomeContainer = (props) => {
         };
 
         getDetail();
-    }, [loading]);
+    }, []);
 
     return (
         <DetailPresenter
