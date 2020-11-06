@@ -5,6 +5,7 @@ import Section from "Components/Section";
 import Loader from "Components/Loader";
 import Error from "Components/Error";
 import Poster from "Components/Poster";
+import { Helmet } from "react-helmet";
 
 const Container = styled.div`
     padding: 0px 20px;
@@ -21,6 +22,9 @@ const HomePresenter = ({
         <Loader />
     ) : (
         <Container>
+            <Helmet>
+                <title>Movies | Hefilx</title>
+            </Helmet>
             {nowPlaying && nowPlaying.length > 0 && (
                 <Section title="Now Playing Movies">
                     {nowPlaying.map((m) => (

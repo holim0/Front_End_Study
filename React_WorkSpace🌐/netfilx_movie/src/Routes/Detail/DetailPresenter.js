@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import Loader from "Components/Loader";
+import { Helmet } from "react-helmet";
 
 const Container = styled.div`
     height: calc(100vh - 50px);
@@ -49,7 +50,7 @@ const DataContainer = styled.div`
 `;
 
 const Data = styled.ul`
-    margin-bottom: 15px;
+    margin-top: 15px;
 `;
 
 const Title = styled.span`
@@ -62,6 +63,11 @@ function DetailPresenter({ result, error, loading }) {
         <Loader />
     ) : (
         <Container>
+            <Helmet>
+                <title>
+                    {result.title ? result.title : result.name} | Heflix
+                </title>
+            </Helmet>
             <Backdrop
                 bgImage={`https://image.tmdb.org/t/p/original${result.backdrop_path}`}
             />
@@ -76,14 +82,15 @@ function DetailPresenter({ result, error, loading }) {
                 <DataContainer>
                     <Title>{result.title ? result.title : result.name}</Title>
                     <Data>
+                        ●
                         {result.release_date
                             ? result.release_date.substring(0, 4)
                             : result.first_air_date.substring(0, 4)}
                     </Data>
                     <Data>
-                        -{result && result.genres.map((g) => g.name + " ")}
+                        ●{result && result.genres.map((g) => g.name + " ")}
                     </Data>
-                    <Data>-{result.runtime} min</Data>
+                    <Data>●{result.runtime} min</Data>
                 </DataContainer>
             </Content>
         </Container>

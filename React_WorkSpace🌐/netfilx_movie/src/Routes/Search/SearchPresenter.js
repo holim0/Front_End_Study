@@ -5,6 +5,7 @@ import styled from "styled-components";
 import Loader from "Components/Loader";
 import Section from "Components/Section";
 import Poster from "Components/Poster";
+import { Helmet } from "react-helmet";
 
 const Container = styled.div`
     padding: 0px 20px;
@@ -36,6 +37,9 @@ function SearchPresenter({
 }) {
     return (
         <Container>
+            <Helmet>
+                <title>Search | Hefilx</title>
+            </Helmet>
             <Form onSubmit={pushEnter}>
                 <Input
                     placeholder="Search Movie or TV Shows"
