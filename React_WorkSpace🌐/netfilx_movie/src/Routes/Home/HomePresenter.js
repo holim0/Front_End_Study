@@ -8,14 +8,14 @@ const Container = styled.div`
     padding: 0px 20px;
 `;
 
-function HomePresenter({
+const HomePresenter = ({
     nowPlaying,
     getPopular,
     getUpcoming,
     error,
     loading,
-}) {
-    return loading ? (
+}) =>
+    loading ? (
         <Loader />
     ) : (
         <Container>
@@ -43,7 +43,6 @@ function HomePresenter({
             )}
         </Container>
     );
-}
 
 HomePresenter.propTypes = {
     nowPlaying: PropTypes.array,

@@ -9,29 +9,30 @@ const TvContainer = () => {
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
+    const getInfo = async () => {
         try {
-            const getInfo = async () => {
-                const {
-                    data: { results: Popular },
-                } = await Api.TVApi.getPopular();
-                const {
-                    data: { results: AringToday },
-                } = await Api.TVApi.getAiringToday();
-                const {
-                    data: { results: TopRate },
-                } = await Api.TVApi.getTopRate();
+            const {
+                data: { results: Popular },
+            } = await Api.TVApi.getPopular();
+            const {
+                data: { results: AringToday },
+            } = await Api.TVApi.getAiringToday();
+            const {
+                data: { results: TopRate },
+            } = await Api.TVApi.getTopRate();
 
-                handleGetPopular(Popular);
-                handleGetAiringToday(AringToday);
-                handlegetTopRate(TopRate);
-            };
-            getInfo();
+            handleGetPopular(Popular);
+            handleGetAiringToday(AringToday);
+            handlegetTopRate(TopRate);
         } catch {
             setError("Cant find TV information");
         } finally {
             setLoading(false);
         }
+    };
+
+    useEffect(() => {
+        getInfo();
     }, []);
 
     return (

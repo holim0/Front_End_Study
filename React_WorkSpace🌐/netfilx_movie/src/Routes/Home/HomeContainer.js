@@ -9,31 +9,33 @@ const HomeContainer = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    useEffect(() => {
+    const getInfo = async () => {
         try {
-            const getInfo = async () => {
-                const {
-                    data: { results: nowPlaying },
-                } = await Api.MovieApi.nowPlaying();
+            const {
+                data: { results: nowPlaying },
+            } = await Api.MovieApi.nowPlaying();
 
-                const {
-                    data: { results: getUpcoming },
-                } = await Api.MovieApi.getUpcoming();
+            const {
+                data: { results: getUpcoming },
+            } = await Api.MovieApi.getUpcoming();
 
-                const {
-                    data: { results: getPopular },
-                } = await Api.MovieApi.getPopular();
-                handleNowPlaying(nowPlaying);
-                handleGetupcoming(getUpcoming);
-                handleGetPopular(getPopular);
-            };
-            getInfo();
+            const {
+                data: { results: getPopular },
+            } = await Api.MovieApi.getPopular();
+            handleNowPlaying(nowPlaying);
+            handleGetupcoming(getUpcoming);
+            handleGetPopular(getPopular);
         } catch {
             setError("Can't find movie informations!");
         } finally {
             setLoading(false);
         }
+    };
+
+    useEffect(() => {
+        getInfo();
     }, []);
+
     return (
         <HomePresenter
             nowPlaying={nowPlaying}

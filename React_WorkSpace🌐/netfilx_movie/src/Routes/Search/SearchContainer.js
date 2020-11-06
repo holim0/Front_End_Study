@@ -6,19 +6,22 @@ const SearchContainer = () => {
     const [movieResults, handleMovieResults] = useState(null);
     const [tvResults, handleTvResults] = useState(null);
     const [searchWord, handleSearchWord] = useState("");
-    const [error, setError] = useState({});
+    const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
+    const [event, handleEvent] = useState(null);
 
     const handleInput = (e) => {
         e.preventDefault();
-        console.log(searchWord);
+        handleEvent(e);
         if (searchWord !== "") {
             Search(searchWord);
         }
     };
+
     const updateInput = (e) => {
         handleSearchWord(e.target.value);
     };
+
     const Search = async (word) => {
         try {
             const {
