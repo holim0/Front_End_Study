@@ -21,7 +21,6 @@ const TvContainer = () => {
                 data: { results: TopRate },
             } = await Api.TVApi.getTopRate();
 
-            console.log(Popular);
             handleGetPopular(Popular);
             handleGetAiringToday(AringToday);
             handlegetTopRate(TopRate);

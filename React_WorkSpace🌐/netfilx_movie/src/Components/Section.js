@@ -5,8 +5,6 @@ import { animated, useSpring } from "react-spring";
 import { useScroll } from "react-use-gesture";
 
 const Container = styled.div`
-    display: flex;
-    flex-direction: column;
     margin-top: 50px;
 `;
 
@@ -19,13 +17,16 @@ const Title = styled.h1`
 const Grid = styled.div`
     display: flex;
     overflow-x: scroll;
-    width: 100%;
-    padding: 20px 0px;
     &::-webkit-scrollbar {
         display: none;
     }
+    width: 100%;
+    padding: 20px 0px;
 `;
 
+const Ani = styled.div`
+    display: flex;
+`;
 const clamp = (value, clampAt = 30) => {
     if (value > 0) {
         return value > clampAt ? clampAt : value;
@@ -40,7 +41,6 @@ const Section = ({ title, children }) => {
     }));
 
     const bind = useScroll((event) => {
-        console.log(event);
         set({
             transform: `perspective(500px) rotateY(${
                 event.scrolling ? clamp(event.delta[0]) : 0
@@ -51,7 +51,21 @@ const Section = ({ title, children }) => {
     return (
         <Container>
             <Title>{title}</Title>
-            <Grid {...bind()}>{children}</Grid>
+            <Grid {...bind()}>
+                {children &&
+                    children.length > 0 &&
+                    Object.keys(children).map((idx) => {
+                        return (
+                            <Ani
+                                as={animated.div}
+                                style={{ ...style }}
+                                key={idx}
+                            >
+                                {children[idx]}
+                            </Ani>
+                        );
+                    })}
+            </Grid>
         </Container>
     );
 };

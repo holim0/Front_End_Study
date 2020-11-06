@@ -51,25 +51,10 @@ const Year = styled.span`
     color: rgba(255, 255, 255, 0.5);
 `;
 
-const clamp = (value, clampAt = 30) => {
-    if (value > 0) {
-        return value > clampAt ? clampAt : value;
-    } else {
-        return value < -clampAt ? -clampAt : value;
-    }
-};
-
 const Poster = ({ id, imgUrl, title, rating, year, isMovie = false }) => {
-    const style = useSpring({
-        from: {
-            transform: "perspective(500px) rotateY(0deg)",
-        },
-        transform: "perspective(500px) rotateY(25deg)",
-    });
-
     return (
         <Link to={isMovie ? `/movie/${id}` : `/show/${id}`}>
-            <Container as={animated.div} style={style}>
+            <Container>
                 <ImgContainer>
                     <Img
                         bgUrl={
