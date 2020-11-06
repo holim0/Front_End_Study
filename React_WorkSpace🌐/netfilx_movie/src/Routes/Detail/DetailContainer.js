@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import DetailPresenter from "./DetailPresenter";
 import Api from "Api";
 
-const HomeContainer = (props) => {
+const DetailContainer = (props) => {
     const {
         location: { pathname },
     } = props;
@@ -12,39 +12,36 @@ const HomeContainer = (props) => {
     const [isMoive, handleIsMovie] = useState(pathname.includes("/movie/"));
     const [id, handleId] = useState(null);
 
-    useEffect(() => {
-        const getDetail = async () => {
-            const {
-                match: {
-                    params: { id },
-                },
-                history: { push },
-            } = props;
+    const getDetail = async () => {
+        const {
+            match: {
+                params: { id },
+            },
+            history: { push },
+        } = props;
 
-            if (isNaN(parseInt(id))) {
-                return push("/");
+        if (isNaN(parseInt(id))) {
+            return push("/");
+        } else {
+            handleId(parseInt(id));
+        }
+
+        try {
+            if (isMoive) {
+                const val = await Api.MovieApi.movieDetail(id);
+                handleResult(val.data);
             } else {
-                handleId(parseInt(id));
+                const val = await Api.TVApi.tvDetail(id);
+                handleResult(val.data);
             }
+        } catch {
+            setError("Cant find anything!");
+        } finally {
+            setLoading(false);
+        }
+    };
 
-            let res = null;
-
-            try {
-                if (isMoive) {
-                    const val = await Api.MovieApi.movieDetail(id);
-                    res = val.data;
-                } else {
-                    const val = await Api.TVApi.tvDetail(id);
-                    res = val.data;
-                }
-            } catch {
-                setError("Cant find anything!");
-            } finally {
-                setLoading(false);
-                handleResult(res);
-            }
-        };
-
+    useEffect(() => {
         getDetail();
     }, []);
 
@@ -57,4 +54,4 @@ const HomeContainer = (props) => {
     );
 };
 
-export default HomeContainer;
+export default DetailContainer;
