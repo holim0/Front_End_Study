@@ -101,6 +101,7 @@ function DetailPresenter({ result, error, loading }) {
                         <Dot>•</Dot>
                         {result.runtime} min
                     </Data>
+                    <Data>{result.overview}</Data>
                 </DataContainer>
             </Content>
         </Container>
