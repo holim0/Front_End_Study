@@ -50,15 +50,19 @@ const DataContainer = styled.div`
 `;
 
 const Data = styled.ul`
+    font-size: 20px;
     margin-top: 15px;
 `;
 
-const Title = styled.span`
+const Title = styled.p`
     font-size: 80px;
 `;
 
+const Dot = styled.span`
+    margin-right: 8px;
+`;
+
 function DetailPresenter({ result, error, loading }) {
-    console.log(result);
     return loading ? (
         <Loader />
     ) : (
@@ -81,16 +85,22 @@ function DetailPresenter({ result, error, loading }) {
                 />
                 <DataContainer>
                     <Title>{result.title ? result.title : result.name}</Title>
+
                     <Data>
-                        ●
+                        <Dot>•</Dot>
                         {result.release_date
                             ? result.release_date.substring(0, 4)
                             : result.first_air_date.substring(0, 4)}
                     </Data>
+
                     <Data>
-                        ●{result && result.genres.map((g) => g.name + " ")}
+                        <Dot>•</Dot>
+                        {result && result.genres.map((g) => g.name + " / ")}
                     </Data>
-                    <Data>●{result.runtime} min</Data>
+                    <Data>
+                        <Dot>•</Dot>
+                        {result.runtime} min
+                    </Data>
                 </DataContainer>
             </Content>
         </Container>
