@@ -29,16 +29,17 @@ const HomeContainer = () => {
             const {
                 data: { results: nowPlaying },
             } = await Api.MovieApi.nowPlaying();
-            dispatch(actionPack.handleNowPlaying(nowPlaying));
+
             const {
                 data: { results: getUpcoming },
             } = await Api.MovieApi.getUpcoming();
-            dispatch(actionPack.handleGetupcoming(getUpcoming));
+
             const {
                 data: { results: getPopular },
             } = await Api.MovieApi.getPopular();
-
-            dispatch(actionPack.handleGetPopular(getPopular));
+            dispatch(actionPack.handleNowplaying(nowPlaying));
+            dispatch(actionPack.handleUpcoming(getUpcoming));
+            dispatch(actionPack.handlePopular(getPopular));
         } catch {
             dispatch(actionPack.setError("Can't find movie informations!"));
         } finally {

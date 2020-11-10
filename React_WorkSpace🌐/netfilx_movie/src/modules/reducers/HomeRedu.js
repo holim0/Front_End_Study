@@ -1,3 +1,5 @@
+import { createAction } from "redux-actions";
+
 const HANDLE_NOWPLAYING = "HANDLE_NOWPLAYING";
 const HANDLE_POPULAR = "HANDLE_POPULAR";
 const HANDLE_UPCOMING = "HANDLE_UPCOMING";
@@ -19,7 +21,6 @@ const initialState = {
 };
 
 const HomeRedu = (state = initialState, action) => {
-    console.log(action.e);
     switch (action.type) {
         case HANDLE_NOWPLAYING:
             return {
