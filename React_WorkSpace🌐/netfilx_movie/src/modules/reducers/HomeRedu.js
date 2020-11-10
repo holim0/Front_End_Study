@@ -19,6 +19,7 @@ const initialState = {
 };
 
 const HomeRedu = (state = initialState, action) => {
+    console.log(action.e);
     switch (action.type) {
         case HANDLE_NOWPLAYING:
             return {

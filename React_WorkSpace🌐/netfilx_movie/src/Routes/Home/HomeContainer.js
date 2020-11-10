@@ -1,21 +1,26 @@
 import React, { useState, useEffect } from "react";
 import HomePresenter from "./HomePresenter";
-import { connect } from "react-redux";
+import { useSelector, useDispatch, shallowEqual } from "react-redux";
 import { actionPack } from "modules/reducers/HomeRedu";
 import Api from "Api";
 
-const HomeContainer = ({
-    handleNowPlaying,
-    setError,
-    setLoading,
-    nowPlaying,
-    error,
-    loading,
-}) => {
+const HomeContainer = () => {
+    const { nowPlaying, getPopular, getUpcoming, loading, error } = useSelector(
+        (state) => ({
+            nowPlaying: state.HomeRedu.nowPlaying,
+            getPopular: state.HomeRedu.getPopular,
+            getUpcoming: state.HomeRedu.getUpcoming,
+            loading: state.HomeRedu.loading,
+            error: state.HomeRedu.error,
+        })
+    );
+
+    const dispatch = useDispatch();
+
     // const [nowPlaying, handleNowPlaying] = useState(null);
 
-    const [getPopular, handleGetPopular] = useState(null);
-    const [getUpcoming, handleGetupcoming] = useState(null);
+    // const [getPopular, handleGetPopular] = useState(null);
+    // const [getUpcoming, handleGetupcoming] = useState(null);
     // const [loading, setLoading] = useState(true);
     // const [error, setError] = useState(null);
 
@@ -24,22 +29,20 @@ const HomeContainer = ({
             const {
                 data: { results: nowPlaying },
             } = await Api.MovieApi.nowPlaying();
-
+            dispatch(actionPack.handleNowPlaying(nowPlaying));
             const {
                 data: { results: getUpcoming },
             } = await Api.MovieApi.getUpcoming();
-
+            dispatch(actionPack.handleGetupcoming(getUpcoming));
             const {
                 data: { results: getPopular },
             } = await Api.MovieApi.getPopular();
 
-            handleNowPlaying(nowPlaying);
-            handleGetupcoming(getUpcoming);
-            handleGetPopular(getPopular);
+            dispatch(actionPack.handleGetPopular(getPopular));
         } catch {
-            setError("Can't find movie informations!");
+            dispatch(actionPack.setError("Can't find movie informations!"));
         } finally {
-            setLoading(false);
+            dispatch(actionPack.setLoading(false));
         }
     };
 
@@ -58,20 +61,4 @@ const HomeContainer = ({
     );
 };
 
-const mapStateToProps = (state) => {
-    return {
-        nowPlaying: state.nowPlaying,
-        error: state.setError,
-        loading: state.setLoading,
-    };
-};
-const mapDispatchToProps = (dispatch) => {
-    // console.log(dispatch);
-    return {
-        handleNowPlaying: (list) => dispatch(actionPack.handleNowPlaying(list)),
-        setError: (e) => dispatch(actionPack.setError(e)),
-        setLoading: (flag) => dispatch(actionPack.setLoading(flag)),
-    };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(HomeContainer);
+export default HomeContainer;

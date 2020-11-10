@@ -18,6 +18,7 @@ const HomePresenter = ({
     error,
     loading,
 }) => {
+    console.log(loading);
     return loading ? (
         <Loader />
     ) : (
