@@ -1,13 +1,23 @@
 import React, { useState, useEffect } from "react";
 import HomePresenter from "./HomePresenter";
+import { connect } from "react-redux";
+import { actionPack } from "modules/reducers/HomeRedu";
 import Api from "Api";
 
-const HomeContainer = () => {
-    const [nowPlaying, handleNowPlaying] = useState(null);
+const HomeContainer = ({
+    handleNowPlaying,
+    setError,
+    setLoading,
+    nowPlaying,
+    error,
+    loading,
+}) => {
+    // const [nowPlaying, handleNowPlaying] = useState(null);
+
     const [getPopular, handleGetPopular] = useState(null);
     const [getUpcoming, handleGetupcoming] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+    // const [loading, setLoading] = useState(true);
+    // const [error, setError] = useState(null);
 
     const getInfo = async () => {
         try {
@@ -48,4 +58,20 @@ const HomeContainer = () => {
     );
 };
 
-export default HomeContainer;
+const mapStateToProps = (state) => {
+    return {
+        nowPlaying: state.nowPlaying,
+        error: state.setError,
+        loading: state.setLoading,
+    };
+};
+const mapDispatchToProps = (dispatch) => {
+    // console.log(dispatch);
+    return {
+        handleNowPlaying: (list) => dispatch(actionPack.handleNowPlaying(list)),
+        setError: (e) => dispatch(actionPack.setError(e)),
+        setLoading: (flag) => dispatch(actionPack.setLoading(flag)),
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(HomeContainer);
