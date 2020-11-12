@@ -6,11 +6,11 @@ const HANDLE_UPCOMING = "HANDLE_UPCOMING";
 const SETLOADING = "SETLOADING";
 const SETERROR = "SETERROR";
 
-const handleNowplaying = (list) => ({ type: HANDLE_NOWPLAYING, list });
-const handlePopular = (list) => ({ type: HANDLE_POPULAR, list });
-const handleUpcoming = (list) => ({ type: HANDLE_UPCOMING, list });
-const setLoading = (load) => ({ type: SETLOADING, load });
-const setError = (e) => ({ type: SETERROR, e });
+const handleNowplaying = (list) => ({ type: HANDLE_NOWPLAYING, list }); //현재 상영 영화 액션함수
+const handlePopular = (list) => ({ type: HANDLE_POPULAR, list }); //현재 안가 영화 액션함수
+const handleUpcoming = (list) => ({ type: HANDLE_UPCOMING, list }); //개봉 예정 영화 액션함수
+const setLoading = (load) => ({ type: SETLOADING, load }); // 로딩 액션함수
+const setError = (e) => ({ type: SETERROR, e }); //에러 액션함수
 
 const initialState = {
     nowPlaying: null,
@@ -63,6 +63,6 @@ export const actionPack = {
     handleUpcoming,
     setLoading,
     setError,
-};
+}; // 각 액션 함수를 합병.
 
 export default HomeRedu;

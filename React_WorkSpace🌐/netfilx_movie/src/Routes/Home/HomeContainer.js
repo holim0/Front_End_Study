@@ -6,14 +6,9 @@ import Api from "Api";
 
 const HomeContainer = () => {
     const { nowPlaying, getPopular, getUpcoming, loading, error } = useSelector(
-        (state) => ({
-            nowPlaying: state.HomeRedu.nowPlaying,
-            getPopular: state.HomeRedu.getPopular,
-            getUpcoming: state.HomeRedu.getUpcoming,
-            loading: state.HomeRedu.loading,
-            error: state.HomeRedu.error,
-        })
+        (state) => state.HomeRedu
     );
+    // 현재 state 가져오기.
 
     const dispatch = useDispatch();
 

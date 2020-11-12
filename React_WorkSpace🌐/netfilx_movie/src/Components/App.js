@@ -6,7 +6,7 @@ function App() {
     return (
         <>
             <Router />
-            <GlobalStyles />
+            <GlobalStyles /> {/* 공통 스타일 적용 */}
         </>
     );
 }

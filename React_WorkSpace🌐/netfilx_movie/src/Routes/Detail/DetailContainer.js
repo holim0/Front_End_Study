@@ -9,7 +9,7 @@ const DetailContainer = (props) => {
     const [result, handleResult] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [isMoive, handleIsMovie] = useState(pathname.includes("/movie/"));
+    const [isMoive, handleIsMovie] = useState(pathname.includes("/movie/")); // 영화인지 path를 통해서 판단.
     const [id, handleId] = useState(null);
 
     const getDetail = async () => {

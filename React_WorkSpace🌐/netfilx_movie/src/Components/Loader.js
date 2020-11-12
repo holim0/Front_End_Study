@@ -11,7 +11,7 @@ const Movement = keyframes`
 
 const Container = styled.div`
     height: 100vh;
-    width: 100vh; 
+    width: 100vh;
     font-size: 50px;
     margin: 30px auto;
     color: #ffb300;
@@ -21,7 +21,6 @@ const Container = styled.div`
 const Word = styled.span`
     display: inline-block;
     margin: 0 1px;
-
     animation: ${Movement} 0.7s infinite;
 
     &:nth-child(2) {
