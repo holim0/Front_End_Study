@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# Heflix Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+</br>
 
-## Available Scripts
+- **개발 환경 : vs code**
+- **개발 언어 및 프레임 워크 : react js**
+- **함수형 컴포넌트를 사용해서 구현 (hook)**
+- **스타일링은 styled-components 사용**
 
-In the project directory, you can run:
+</br>
 
-### `yarn start`
+#### Main Page
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+</br>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![스크린샷 2020-11-08 오후 11 43 54](https://user-images.githubusercontent.com/48006103/98468307-41e73700-221d-11eb-9ede-8ddce55f3bfc.png)
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+:arrow_right: 메인 페이지에는  현재 상영되는 영화, 인기 많은 영화, 개봉 예정 영화 순으로 보여주었습니다. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+:arrow_right: 영화 목록은 가로로 스크롤 되게 하였고 스크롤 될 때 간단한 효과를 주었습니다.  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+</br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/48006103/98468898-e36f8800-221f-11eb-893f-612fa48faf6d.gif)
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+</br></br> 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+#### Detail Page 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+</br>
 
-### Analyzing the Bundle Size
+:arrow_right: 포스터를 클릭하면 영화나 TV 프로그램에 대한 정보를 간략하게 보여줍니다. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![스크린샷 2020-11-09 오전 12 14 56](https://user-images.githubusercontent.com/48006103/98469063-da32eb00-2220-11eb-9a33-3e247b3e9a80.png)
 
-### Making a Progressive Web App
+</br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+----
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+</br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+#### Search Page
 
-### `yarn build` fails to minify
+</br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+:arrow_right: 영화나 티비 프로그램을 검색할 수 있게 구현했습니다. 
+
+![스크린샷 2020-11-09 오전 12 20 59](https://user-images.githubusercontent.com/48006103/98469343-55e16780-2222-11eb-97aa-4d20ee99fddf.png)
+
+</br>
+
+![스크린샷 2020-11-09 오전 12 21 17](https://user-images.githubusercontent.com/48006103/98469353-609bfc80-2222-11eb-9133-2f51f862edad.png)
+
+
+
+
+
+
+
+---
+
+
+
+</br></br>
