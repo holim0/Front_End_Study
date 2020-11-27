@@ -42,17 +42,17 @@
 
 
 
-|      DATE      |          Tags           |                            Files                             |
-| :------------: | :---------------------: | :----------------------------------------------------------: |
-| **2020/11/08** | **Heflix-Project Done** | [:open_file_folder:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/React/20201108.md) |
-|                |                         |                                                              |
-|                |                         |                                                              |
-|                |                         |                                                              |
-|                |                         |                                                              |
-|                |                         |                                                              |
-|                |                         |                                                              |
-|                |                         |                                                              |
-|                |                         |                                                              |
+|      DATE      |                Tags                |                            Files                             |
+| :------------: | :--------------------------------: | :----------------------------------------------------------: |
+| **2020/11/08** |      **Heflix-Project Done**       | [:open_file_folder:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/React/20201108.md) |
+| **2020/11/27** | **Redux, Middleware(saga, thunk)** | [:open_file_folder:](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/React/20201127.md) |
+|                |                                    |                                                              |
+|                |                                    |                                                              |
+|                |                                    |                                                              |
+|                |                                    |                                                              |
+|                |                                    |                                                              |
+|                |                                    |                                                              |
+|                |                                    |                                                              |
 
 
 
