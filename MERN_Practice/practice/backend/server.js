@@ -21,7 +21,7 @@ mongoose.connect(uri, {
 const connection = mongoose.connection;
 
 connection.once("open", () => {
-    console.log("success hi");
+    console.log("success");
 });
 
 const exerciseRouter = require("./routes/exercises");
