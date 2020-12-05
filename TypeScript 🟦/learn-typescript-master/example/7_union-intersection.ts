@@ -1,40 +1,22 @@
 function logMessage(value: string) {
-  console.log(value);
-}
-function logMessage(value: number) {
-  console.log(value);
-}
-function logMessage(value: any) {
-  console.log(value);
+    console.log(value);
 }
 
-// # Union 타입 문법 - `any` 보다는 명시적임
-function logMessage(value: string | number) {
-  console.log(value);
-}
+logMessage("hi");
 
-function logMessage(value: string | number) {
-  if (typeof value === 'string') {
-    value.toLocaleUpperCase();
-  }
-  if (typeof value === 'number') {
-    value.toLocaleString();
-  }
-  throw new TypeError('value must be string or number')
-}
+// 유니온 타입
+const log = (v: string | number) => {
+    console.log(v);
+};
 
-// # Intersection 타입 문법
-interface Developer {
-  name: string;
-  skill: string;
+interface Dev {
+    name: string;
+    skill: string;
 }
 
 interface Person {
-  name: string;
-  age: number;
+    name: string;
+    age: number;
 }
-
-function askSomeone(someone: Developer | Person) {
-  someone.name; // O
-  someone.age; // X
-}
+//공통 속성만 찾을 수 있다.
+const someone = (man: Dev & Person) => {};

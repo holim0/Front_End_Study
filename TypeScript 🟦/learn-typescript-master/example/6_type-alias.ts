@@ -1,31 +1,16 @@
-// https://www.typescriptlang.org/docs/handbook/advanced-types.html
-// https://www.typescriptlang.org/docs/handbook/advanced-types.html#nullable-types
+// // https://www.typescriptlang.org/docs/handbook/advanced-types.html
+// // https://www.typescriptlang.org/docs/handbook/advanced-types.html#nullable-types
 
-// #1
-// function sum(a: number, b:number) {
-//   return a + b;
-// }
-type SumParameter = number;
+// // #1
+// // function sum(a: number, b:number) {
+// //   return a + b;
+// // }
+// type Person = {
+//     name: string;
+//     age: number;
+// };
 
-function sum(a: SumParameter, b: SumParameter) {
-  return a + b;
-}
-
-// #2
-type Person = {
-  name: string;
-  age: number;
-};
-
-function getPerson(): Person {
-  // ...
-}
-
-// #3
-type Hero = {
-  skill: string;
-}
-
-const capt: Hero = { 
-  // skill: 'throwing a shield' 
-}
+// let heeje: Person = {
+//     name: "희제",
+//     age: 20,
+// };
