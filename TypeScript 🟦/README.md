@@ -17,6 +17,7 @@
 |  **2020/12/04**  |                 **Basic Type, function**                 | [🗂](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/TS/20201204.md) |
 |  **2020/12/06**  | **interface, type alias, union type, intersection type** | [🗂](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/TS/20201206.md) |
 | **2020/12/06-1** |                     **enum, class**                      | [🗂](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/TS/20201206-1.md) |
+| **2020/12/06-2** |                       **Generic**                        | [🗂](https://github.com/holim0/Front_End_Study/blob/master/README_Directory/TS/20201206-2.md) |
 
 
 

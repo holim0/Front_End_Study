@@ -20,3 +20,5 @@ interface Person {
 }
 //공통 속성만 찾을 수 있다.
 const someone = (man: Dev & Person) => {};
+
+someone();
