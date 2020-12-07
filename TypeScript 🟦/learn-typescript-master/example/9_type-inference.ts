@@ -1,3 +1,5 @@
+import { extends } from "../quiz/2_address-book/.eslintrc";
+
 var a = "a";
 
 function logA(a = "a") {
@@ -9,18 +11,16 @@ interface Dropdown<T> {
     value: T;
     title: string;
 }
-var items: Dropdown<number> = {
-    value: 10,
-    title: "a",
-};
 
-interface DetailedDropdown<T> extends Dropdown<T> {
-    description: string;
-    tag: T;
+interface Detailed<K> extends Dropdown<K>{
+    message: string;
+    tag :K;
 }
-var detailItems: DetailedDropdown<number> = {
-    value: "hi",
+const items: Dropdown<string> = {
+    value: "10",
     title: "a",
-    description: "b",
-    tag: "c",
 };
+const item2 : Detailed<string>{
+    
+}
+
