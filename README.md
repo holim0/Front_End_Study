@@ -14,11 +14,11 @@
 
 :arrow_right:  프론트 엔드 공부 공간
 
-:arrow_right:  사용언어 :  JavaSript(현재 주로 공부 중), HTML, REACT(공부 예정)
+:arrow_right:  사용언어 :  JavaSript(현재 주로 공부 중), HTML, REACT
 
 :arrow_right:  목표 : 나만의 포트폴리오 사이트 만들기!(miniproject) :fire:
 
-:arrow_right: 앞으로 필요한 공부 : 리액트, CSS 기법, 서버 연동, JavaSript, TypeScript
+:arrow_right: 앞으로 필요한 공부 :  TypeScript, Next Js, GraphQL
 
 </br> 
 
