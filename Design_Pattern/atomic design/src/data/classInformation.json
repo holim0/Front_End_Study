@@ -1,0 +1,18 @@
+{
+    "success": true,
+    "result": {
+        "Category": ["온라인쇼핑몰", "클래스101"],
+        "title": "[1+1클래스] 스마트스토어를 활용한 중국 구매 대행 완벽 가이드!",
+
+        "classSimpleInfo": {
+            "chapter": 10,
+            "videoNumber": 150,
+            "startDate": "now",
+            "Caption": true
+        },
+        "monthlyInstallments": 5,
+        "monthlyPayment": 22283,
+        "discountAmount": 32,
+        "goodAmount": 660
+    }
+}
